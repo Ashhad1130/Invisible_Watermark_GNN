@@ -1,0 +1,10 @@
+diffusers==0.21.4
+transformers==4.35.0
+accelerate==0.24.1
+torch
+torchvision
+scipy
+scikit-image
+matplotlib
+tqdm
+Pillow
