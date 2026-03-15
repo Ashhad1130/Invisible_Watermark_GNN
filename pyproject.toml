@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "tree-ring-watermark-experiment"
+version = "1.0.0"
+description = "Baseline vs Optimized Tree-Ring Watermark comparison"
+authors = ["Ashhad Quadri"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+torch = ">=2.1.0"
+torchvision = ">=0.16.0"
+diffusers = "0.21.4"
+transformers = ">=4.30,<4.36"
+accelerate = ">=0.20"
+safetensors = ">=0.3"
+huggingface-hub = ">=0.19,<0.25"
+datasets = ">=3.0"
+scipy = "*"
+scikit-learn = "*"
+Pillow = "*"
+numpy = "<2.0"
+tqdm = "*"
+open-clip-torch = "*"
+matplotlib = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
