@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "tree-ring-watermark-experiment"
+version = "1.0.0"
+description = "Baseline vs Optimized Tree-Ring Watermark comparison"
+authors = ["Ashhad Quadri"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+# Paper-exact versions (Wen et al. 2023):
+# "PyTorch==1.13.0, transformers==4.23.1, diffusers==0.11.1"
+# With diffusers==0.11.1, DPMSolverMultistepScheduler.init_noise_sigma==1.0 (correct).
+# Higher diffusers versions have init_noise_sigma~14.6, causing double-scaling bug.
+torch = ">=1.13.0"
+torchvision = ">=0.14.0"
+diffusers = "0.11.1"
+transformers = ">=4.26.0,<4.36"
+accelerate = ">=0.11.0,<0.21"
+safetensors = ">=0.2"
+huggingface-hub = ">=0.10.0,<0.17"
+datasets = ">=1.0"
+setuptools = "<70"
+scipy = "*"
+scikit-learn = "*"
+Pillow = "*"
+numpy = "<2.0"
+tqdm = "*"
+open-clip-torch = "*"
+matplotlib = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
