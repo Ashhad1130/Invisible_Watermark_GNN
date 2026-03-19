@@ -97,7 +97,18 @@ def measure_similarity(images, prompt, model, clip_preprocess, tokenizer, device
 
 
 def get_dataset(args):
-    if 'laion' in args.dataset:
+    # Support landscape-only prompts (local, no download)
+    if 'landscape' in args.dataset.lower():
+        try:
+            from landscape_prompts import get_prompts
+            prompts = get_prompts(0, 1000)  # Cycle prompts for larger scales
+            dataset = [{'prompt': p} for p in prompts]
+            prompt_key = 'prompt'
+        except ImportError:
+            print("Warning: landscape_prompts not found. Falling back to Gustavosta.")
+            dataset = load_dataset("Gustavosta/Stable-Diffusion-Prompts")['test']
+            prompt_key = 'Prompt'
+    elif 'laion' in args.dataset:
         dataset = load_dataset(args.dataset)['train']
         prompt_key = 'TEXT'
     elif 'coco' in args.dataset:

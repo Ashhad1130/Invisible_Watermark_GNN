@@ -2,6 +2,9 @@
 from dataclasses import dataclass, field
 from typing import Optional, List
 
+# Add support for landscape-only dataset (optional alternative to Gustavosta)
+DATASET_LANDSCAPE = "landscape"  # Placeholder dataset name
+
 @dataclass
 class WatermarkConfig:
     w_seed: int = 999999
@@ -130,3 +133,31 @@ def get_large_scale_multiring():
             w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
             w_radius=10, w_radius_inner=4),
         attacks=EXTENDED_ATTACKS, checkpoint_every=10)
+
+
+# ==============================================================================
+# LANDSCAPE-ONLY VARIANTS (Optional: use local landscape prompts instead of Gustavosta)
+# ==============================================================================
+def get_small_scale_baseline_landscape():
+    """Baseline with landscape prompts (no dataset download needed)."""
+    cfg = get_small_scale_baseline()
+    cfg.name = "small_baseline_landscape"
+    cfg.reference_model = None  # Skip CLIP for faster iteration
+    # The dataset will be set to "landscape" in run_baseline.py --dataset flag
+    return cfg
+
+
+def get_small_scale_optimized_landscape():
+    """Optimized with landscape prompts."""
+    cfg = get_small_scale_optimized()
+    cfg.name = "small_optimized_landscape"
+    cfg.reference_model = None
+    return cfg
+
+
+def get_small_scale_multiring_landscape():
+    """Multi-ring with landscape prompts."""
+    cfg = get_small_scale_multiring()
+    cfg.name = "small_multi_ring_landscape"
+    cfg.reference_model = None
+    return cfg
