@@ -35,7 +35,8 @@ def build_args(config, attack):
     a.with_tracking=False; a.max_num_log_image=100
     wm=config.watermark
     a.w_seed=wm.w_seed; a.w_channel=wm.w_channel; a.w_pattern=wm.w_pattern
-    a.w_mask_shape=wm.w_mask_shape; a.w_radius=wm.w_radius; a.w_measurement=wm.w_measurement
+    a.w_mask_shape=wm.w_mask_shape; a.w_radius=wm.w_radius; a.w_radius_inner=wm.w_radius_inner
+    a.w_measurement=wm.w_measurement
     a.w_injection=wm.w_injection; a.w_pattern_const=wm.w_pattern_const
     a.r_degree=attack.r_degree; a.jpeg_ratio=attack.jpeg_ratio; a.crop_scale=attack.crop_scale
     a.crop_ratio=attack.crop_ratio; a.gaussian_blur_r=attack.gaussian_blur_r

@@ -9,6 +9,7 @@ class WatermarkConfig:
     w_pattern: str = "ring"
     w_mask_shape: str = "circle"
     w_radius: int = 10
+    w_radius_inner: int = 4  # outer radius of inner band for multi_ring mask
     w_measurement: str = "l1_complex"
     w_injection: str = "complex"
     w_pattern_const: float = 0.0
@@ -101,4 +102,31 @@ def get_large_scale_optimized():
         name="large_optimized", approach="optimized", start=0, end=100,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
+        attacks=EXTENDED_ATTACKS, checkpoint_every=10)
+
+
+def get_small_scale_multiring():
+    """Multi-ring: two rotation-invariant Fourier bands + 100 DDIM steps.
+    Inner band (r=0..4): survives heavy cropping (near-DC energy).
+    Outer band (r=6..10): carries the distinct signal for detection.
+    Gap at r=5 keeps the two bands spectrally separate.
+    Still rotation-invariant because both bands are annuli.
+    """
+    return ExperimentConfig(
+        name="small_multi_ring", approach="multi_ring", start=0, end=10,
+        num_inference_steps=100, test_num_inference_steps=100,
+        watermark=WatermarkConfig(
+            w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
+            w_radius=10, w_radius_inner=4),
+        attacks=BASIC_ATTACKS, checkpoint_every=5)
+
+
+def get_large_scale_multiring():
+    """Multi-ring, large scale."""
+    return ExperimentConfig(
+        name="large_multi_ring", approach="multi_ring", start=0, end=100,
+        num_inference_steps=100, test_num_inference_steps=100,
+        watermark=WatermarkConfig(
+            w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
+            w_radius=10, w_radius_inner=4),
         attacks=EXTENDED_ATTACKS, checkpoint_every=10)

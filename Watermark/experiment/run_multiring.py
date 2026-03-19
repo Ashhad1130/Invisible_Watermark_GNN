@@ -1,14 +1,18 @@
-"""Optimized runner: 100 DDIM steps for more accurate watermark detection.
+"""Multi-ring runner: two Fourier-domain annular bands + 100 DDIM steps.
 
-Key optimization over baseline: 100 inference steps (vs 50).
+What this adds over the optimized (single-ring) variant:
+  - Inner band  (r = 0 .. w_radius_inner): low-frequency energy near DC.
+    These components survive aggressive cropping because they sit at the
+    center of the spectrum where spatial structure is coarsest.
+  - Outer band  (r = w_radius_inner+gap .. w_radius): mid-frequency ring
+    that carries the primary detection signal.
+  - Gap between bands keeps them spectrally distinct.
+  Both bands remain annuli → rotation-invariant → robust to rotation attacks.
 
-Why more steps helps:
-  DDIM inversion (detection) approximates the noise z_T from a watermarked image.
-  Each step introduces approximation error. With 50 steps the error compounds;
-  with 100 steps each step is smaller -> z_T is closer to the true watermarked noise
-  -> the ring pattern is better recovered -> higher AUC/TPR under attacks.
-
-Both generation and detection use 100 steps for consistency.
+Combined the two bands provide redundancy: heavy cropping kills the outer
+ring but the inner one survives; blur/noise hurt the inner ring but the
+outer one remains detectable.  L1 distance is computed across all masked
+pixels (both bands), so either surviving band contributes to detection.
 """
 import sys, json, time, copy, argparse
 from pathlib import Path
@@ -39,8 +43,8 @@ def build_args(config, attack):
     wm=config.watermark
     a.w_seed=wm.w_seed; a.w_channel=wm.w_channel; a.w_pattern=wm.w_pattern
     a.w_mask_shape=wm.w_mask_shape; a.w_radius=wm.w_radius; a.w_radius_inner=wm.w_radius_inner
-    a.w_measurement=wm.w_measurement
-    a.w_injection=wm.w_injection; a.w_pattern_const=wm.w_pattern_const
+    a.w_measurement=wm.w_measurement; a.w_injection=wm.w_injection
+    a.w_pattern_const=wm.w_pattern_const
     a.r_degree=attack.r_degree; a.jpeg_ratio=attack.jpeg_ratio; a.crop_scale=attack.crop_scale
     a.crop_ratio=attack.crop_ratio; a.gaussian_blur_r=attack.gaussian_blur_r
     a.gaussian_std=attack.gaussian_std; a.brightness_factor=attack.brightness_factor; a.rand_aug=attack.rand_aug
@@ -60,13 +64,21 @@ def save_ckpt(p, data):
     with open(p, "w") as f: json.dump(data, f, indent=2)
 
 
-def run_optimized(config, skip_clip=False):
+def run_multiring(config, skip_clip=False):
     device = get_device()
 
+    r_in = config.watermark.w_radius_inner
+    r_out = config.watermark.w_radius
+    gap   = max(1, r_out // 5)
+
     sep = "="*60
-    print(f"\n{sep}\nOPTIMIZED: {config.name} | Device: {device} | Images: {config.start}-{config.end}")
-    print(f"Watermark: ch={config.watermark.w_channel}, pattern={config.watermark.w_pattern}, r={config.watermark.w_radius}")
-    print(f"Optimization: {config.num_inference_steps} steps (vs baseline 50)\n{sep}\n")
+    print(f"\n{sep}\nMULTI-RING: {config.name} | Device: {device} | Images: {config.start}-{config.end}")
+    print(f"Watermark: ch={config.watermark.w_channel}, pattern={config.watermark.w_pattern}, mask=multi_ring")
+    print(f"  Inner band: r=0..{r_in}   (low-freq, survives cropping)")
+    print(f"  Gap:        r={r_in}..{r_in+gap}")
+    print(f"  Outer band: r={r_in+gap}..{r_out}  (mid-freq, primary signal)")
+    print(f"  DDIM steps: {config.num_inference_steps} (embed) / {config.test_num_inference_steps} (detect)")
+    print(f"{sep}\n")
 
     base_dir = Path(__file__).resolve().parent
     ckpt_dir = base_dir/config.checkpoint_dir/config.name
@@ -93,7 +105,7 @@ def run_optimized(config, skip_clip=False):
             config.reference_model, pretrained=config.reference_model_pretrain, device=device)
         ref_tokenizer = open_clip.get_tokenizer(config.reference_model)
 
-    # Detection always uses empty prompt (prompt unknown at detection time — paper Section 3)
+    # Detection uses empty prompt — prompt unknown at detection time (paper Section 3)
     text_embeddings = pipe.get_text_embedding("")
     gt_patch = get_watermarking_pattern(pipe, args, device)
 
@@ -127,7 +139,6 @@ def run_optimized(config, skip_clip=False):
             seed = i + config.gen_seed
             current_prompt = dataset[i][prompt_key]
 
-            # --- Paper approach: AI image generation from watermarked noise ---
             set_random_seed(seed)
             init_latents_no_w = pipe.get_random_latents()
 
@@ -140,7 +151,7 @@ def run_optimized(config, skip_clip=False):
                 latents=init_latents_no_w)
             img_no_w = outputs_no_w.images[0]
 
-            # Watermarked image: inject ring into same noise, re-generate (100 steps)
+            # Watermarked image: inject multi-ring pattern into same noise (100 steps)
             init_latents_w = copy.deepcopy(init_latents_no_w)
             mask = get_watermarking_mask(init_latents_w, args_a, device)
             init_latents_w = inject_watermark(init_latents_w, mask, gt_patch, args_a)
@@ -164,7 +175,7 @@ def run_optimized(config, skip_clip=False):
                 img_w_a.save(d/f"img_{i:04d}_wm_attacked.png")
                 saved.append(i)
 
-            # --- Detection: DDIM inversion with empty prompt, guidance_scale=1 (100 steps) ---
+            # Detection: DDIM inversion (empty prompt, guidance_scale=1, 100 steps)
             t_no = transform_img(img_no_w_a).unsqueeze(0).to(text_embeddings.dtype).to(device)
             rev_no = pipe.forward_diffusion(
                 latents=pipe.get_image_latents(t_no, sample=False),
@@ -202,7 +213,7 @@ def run_optimized(config, skip_clip=False):
         acc = np.max(1 - (fpr + (1 - tpr)) / 2)
         low = tpr[np.where(fpr < .01)[0][-1]] if len(np.where(fpr < .01)[0]) > 0 else 0.0
 
-        final = {"attack": attack.name, "approach": "optimized", "num_images": len(no_w_metrics),
+        final = {"attack": attack.name, "approach": "multi_ring", "num_images": len(no_w_metrics),
             "auc": float(auc), "acc": float(acc), "tpr_at_1fpr": float(low),
             "mean_no_w_metric": float(mean([-m for m in no_w_metrics])),
             "mean_w_metric":    float(mean([-m for m in w_metrics])),
@@ -211,9 +222,13 @@ def run_optimized(config, skip_clip=False):
             "elapsed_seconds": elapsed,
             "watermark_params": {"w_channel": config.watermark.w_channel,
                                  "w_pattern": config.watermark.w_pattern,
-                                 "w_radius":  config.watermark.w_radius},
+                                 "w_mask_shape": config.watermark.w_mask_shape,
+                                 "w_radius":  config.watermark.w_radius,
+                                 "w_radius_inner": config.watermark.w_radius_inner},
             "optimizations": {"embed_steps": config.num_inference_steps,
-                              "detect_steps": config.test_num_inference_steps}}
+                              "detect_steps": config.test_num_inference_steps,
+                              "inner_band": f"r=0..{r_in}",
+                              "outer_band": f"r={r_in+gap}..{r_out}"}}
         all_results[attack.name] = final
         save_ckpt(ckpt_path, {"attack": attack.name, "last_idx": config.end - 1, "completed": True,
             "results": results, "no_w_metrics": no_w_metrics, "w_metrics": w_metrics,
@@ -221,7 +236,7 @@ def run_optimized(config, skip_clip=False):
         print(f"  AUC:{auc:.4f} Acc:{acc:.4f} TPR@1%FPR:{low:.4f} Time:{elapsed:.1f}s")
 
     with open(res_dir/"all_attacks_results.json", "w") as f: json.dump(all_results, f, indent=2)
-    print(f"\nOptimized results: {res_dir/'all_attacks_results.json'}")
+    print(f"\nMulti-ring results: {res_dir/'all_attacks_results.json'}")
     return all_results
 
 
@@ -231,7 +246,6 @@ if __name__ == "__main__":
     p.add_argument("--scale", default="small")
     p.add_argument("--skip_clip", action="store_true")
     a = p.parse_args()
-    from configs import get_small_scale_optimized, get_large_scale_optimized
-    run_optimized(get_small_scale_optimized() if a.scale == "small" else get_large_scale_optimized(),
+    from configs import get_small_scale_multiring, get_large_scale_multiring
+    run_multiring(get_small_scale_multiring() if a.scale == "small" else get_large_scale_multiring(),
                   skip_clip=a.skip_clip)
-

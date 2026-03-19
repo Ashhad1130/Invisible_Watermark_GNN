@@ -123,6 +123,18 @@ def circle_mask(size=64, r=10, x_offset=0, y_offset=0):
     return ((x - x0)**2 + (y-y0)**2)<= r**2
 
 
+def annulus_mask(size=64, r_inner=0, r_outer=10, x_offset=0, y_offset=0):
+    """Boolean mask selecting pixels with r_inner < dist <= r_outer from center.
+    When r_inner=0 this is equivalent to circle_mask(r=r_outer)."""
+    x0 = y0 = size // 2
+    x0 += x_offset
+    y0 += y_offset
+    y, x = np.ogrid[:size, :size]
+    y = y[::-1]
+    dist_sq = (x - x0)**2 + (y - y0)**2
+    return (dist_sq > r_inner**2) & (dist_sq <= r_outer**2)
+
+
 def get_watermarking_mask(init_latents_w, args, device):
     watermarking_mask = torch.zeros(init_latents_w.shape, dtype=torch.bool).to(device)
 
@@ -142,6 +154,26 @@ def get_watermarking_mask(init_latents_w, args, device):
             watermarking_mask[:, :, anchor_p-args.w_radius:anchor_p+args.w_radius, anchor_p-args.w_radius:anchor_p+args.w_radius] = True
         else:
             watermarking_mask[:, args.w_channel, anchor_p-args.w_radius:anchor_p+args.w_radius, anchor_p-args.w_radius:anchor_p+args.w_radius] = True
+    elif args.w_mask_shape == 'multi_ring':
+        # Two rotation-invariant annular bands in Fourier space:
+        #   Inner band: 0 < dist <= w_radius_inner  (near DC; survives heavy cropping)
+        #   Outer band: w_radius_inner+gap < dist <= w_radius  (carries distinct signal)
+        # Both bands are circular → rotation of the image rotates the spectrum but
+        # annuli look identical after rotation, preserving detection.
+        r_out = args.w_radius
+        r_in  = getattr(args, 'w_radius_inner', max(1, r_out // 3))
+        gap   = max(1, r_out // 5)  # gap between bands so they stay distinct
+        size  = init_latents_w.shape[-1]
+
+        inner_band = circle_mask(size, r=r_in)
+        outer_band = annulus_mask(size, r_inner=r_in + gap, r_outer=r_out)
+        np_mask = inner_band | outer_band
+        torch_mask = torch.tensor(np_mask).to(device)
+
+        if args.w_channel == -1:
+            watermarking_mask[:, :] = torch_mask
+        else:
+            watermarking_mask[:, args.w_channel] = torch_mask
     elif args.w_mask_shape == 'no':
         pass
     else:
