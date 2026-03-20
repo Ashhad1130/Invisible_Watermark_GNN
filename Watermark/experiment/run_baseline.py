@@ -24,6 +24,19 @@ from optim_utils import (set_random_seed, transform_img, get_watermarking_mask,
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from device_compat import get_device, get_watermarking_pattern, inject_watermark, eval_watermark, image_distortion
 from configs import ExperimentConfig, AttackConfig
+from landscape_prompts import LANDSCAPE_PROMPTS
+
+
+class LandscapeDataset:
+    """Wrapper to make landscape prompts behave like a dataset."""
+    def __init__(self, prompts):
+        self.prompts = prompts
+    
+    def __getitem__(self, idx):
+        return {"Prompt": self.prompts[idx % len(self.prompts)]}
+    
+    def __len__(self):
+        return len(self.prompts)
 
 
 def build_args(config, attack):
@@ -41,7 +54,7 @@ def build_args(config, attack):
     a.r_degree=attack.r_degree; a.jpeg_ratio=attack.jpeg_ratio; a.crop_scale=attack.crop_scale
     a.crop_ratio=attack.crop_ratio; a.gaussian_blur_r=attack.gaussian_blur_r
     a.gaussian_std=attack.gaussian_std; a.brightness_factor=attack.brightness_factor; a.rand_aug=attack.rand_aug
-    a.dataset="Gustavosta/Stable-Diffusion-Prompts"
+    a.dataset="landscape_prompts"
     a.reference_model=config.reference_model; a.reference_model_pretrain=config.reference_model_pretrain
     return a
 
@@ -91,8 +104,9 @@ def run_baseline(config, skip_clip=False):
     text_embeddings = pipe.get_text_embedding("")
     gt_patch = get_watermarking_pattern(pipe, args, device)
 
-    print("Loading Gustavosta/Stable-Diffusion-Prompts dataset...")
-    dataset, prompt_key = get_dataset(args)
+    print("Loading landscape prompts dataset...")
+    dataset = LandscapeDataset(LANDSCAPE_PROMPTS)
+    prompt_key = "Prompt"
 
     all_results = {}
     for attack in config.attacks:
@@ -226,4 +240,3 @@ if __name__ == "__main__":
     from configs import get_small_scale_baseline, get_large_scale_baseline
     run_baseline(get_small_scale_baseline() if a.scale == "small" else get_large_scale_baseline(),
                  skip_clip=a.skip_clip)
-

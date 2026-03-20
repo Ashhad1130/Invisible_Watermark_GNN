@@ -41,7 +41,7 @@ class ExperimentConfig:
     test_num_inference_steps: Optional[int] = None
     gen_seed: int = 0
     start: int = 0
-    end: int = 10
+    end: int = 3
     reference_model: Optional[str] = "ViT-g-14"
     reference_model_pretrain: Optional[str] = "laion2b_s12b_b42k"
     watermark: WatermarkConfig = field(default_factory=WatermarkConfig)
@@ -78,7 +78,7 @@ EXTENDED_ATTACKS = BASIC_ATTACKS + [
 def get_small_scale_baseline():
     """Paper-exact baseline: DDIM, r=10, 50 steps, single channel."""
     return ExperimentConfig(
-        name="small_baseline", approach="baseline", start=0, end=10,
+        name="small_baseline", approach="baseline", start=0, end=3,
         num_inference_steps=50, test_num_inference_steps=50,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=BASIC_ATTACKS, checkpoint_every=5)
@@ -86,7 +86,7 @@ def get_small_scale_baseline():
 def get_small_scale_optimized():
     """Optimized: 100 DDIM steps for more accurate inversion; r=10 kept (safe for real images)."""
     return ExperimentConfig(
-        name="small_optimized", approach="optimized", start=0, end=10,
+        name="small_optimized", approach="optimized", start=0, end=3,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=BASIC_ATTACKS, checkpoint_every=5)
@@ -116,7 +116,7 @@ def get_small_scale_multiring():
     Still rotation-invariant because both bands are annuli.
     """
     return ExperimentConfig(
-        name="small_multi_ring", approach="multi_ring", start=0, end=10,
+        name="small_multi_ring", approach="multi_ring", start=0, end=3,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(
             w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
