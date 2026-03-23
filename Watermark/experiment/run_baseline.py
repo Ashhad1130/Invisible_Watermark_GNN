@@ -41,7 +41,7 @@ def build_args(config, attack):
     a.r_degree=attack.r_degree; a.jpeg_ratio=attack.jpeg_ratio; a.crop_scale=attack.crop_scale
     a.crop_ratio=attack.crop_ratio; a.gaussian_blur_r=attack.gaussian_blur_r
     a.gaussian_std=attack.gaussian_std; a.brightness_factor=attack.brightness_factor; a.rand_aug=attack.rand_aug
-    a.dataset="Gustavosta/Stable-Diffusion-Prompts"
+    a.dataset=config.dataset
     a.reference_model=config.reference_model; a.reference_model_pretrain=config.reference_model_pretrain
     return a
 
@@ -74,8 +74,9 @@ def run_baseline(config, skip_clip=False):
 
     print("Loading Stable Diffusion pipeline...")
     scheduler = DPMSolverMultistepScheduler.from_pretrained(args.model_id, subfolder="scheduler")
+    torch_dtype = torch.float32 if device == "cpu" else torch.float16
     pipe = InversableStableDiffusionPipeline.from_pretrained(
-        args.model_id, scheduler=scheduler, torch_dtype=torch.float16,
+        args.model_id, scheduler=scheduler, torch_dtype=torch_dtype,
         safety_checker=None)
     pipe = pipe.to(device)
 
@@ -91,7 +92,7 @@ def run_baseline(config, skip_clip=False):
     text_embeddings = pipe.get_text_embedding("")
     gt_patch = get_watermarking_pattern(pipe, args, device)
 
-    print("Loading Gustavosta/Stable-Diffusion-Prompts dataset...")
+    print(f"Loading dataset: {args.dataset}...")
     dataset, prompt_key = get_dataset(args)
 
     all_results = {}
@@ -149,14 +150,13 @@ def run_baseline(config, skip_clip=False):
             # Apply attack
             img_no_w_a, img_w_a = image_distortion(img_no_w, img_w, seed, args_a)
 
-            # Save first 5 pairs
-            if len(saved) < 5:
-                d = out_dir/attack.name; d.mkdir(parents=True, exist_ok=True)
-                img_no_w.save(d/f"img_{i:04d}_no_wm.png")
-                img_w.save(d/f"img_{i:04d}_wm.png")
-                img_no_w_a.save(d/f"img_{i:04d}_no_wm_attacked.png")
-                img_w_a.save(d/f"img_{i:04d}_wm_attacked.png")
-                saved.append(i)
+            # Save all image pairs
+            d = out_dir/attack.name; d.mkdir(parents=True, exist_ok=True)
+            img_no_w.save(d/f"img_{i:04d}_no_wm.png")
+            img_w.save(d/f"img_{i:04d}_wm.png")
+            img_no_w_a.save(d/f"img_{i:04d}_no_wm_attacked.png")
+            img_w_a.save(d/f"img_{i:04d}_wm_attacked.png")
+            saved.append(i)
 
             # --- Detection: DDIM inversion with empty prompt, guidance_scale=1 ---
             t_no = transform_img(img_no_w_a).unsqueeze(0).to(text_embeddings.dtype).to(device)
@@ -221,9 +221,16 @@ if __name__ == "__main__":
     import argparse as ap
     p = ap.ArgumentParser()
     p.add_argument("--scale", default="small")
+    p.add_argument("--landscape", action="store_true", help="Use local landscape_prompts.py instead of Gustavosta")
     p.add_argument("--skip_clip", action="store_true")
     a = p.parse_args()
-    from configs import get_small_scale_baseline, get_large_scale_baseline
-    run_baseline(get_small_scale_baseline() if a.scale == "small" else get_large_scale_baseline(),
-                 skip_clip=a.skip_clip)
+    from configs import (get_small_scale_baseline, get_large_scale_baseline,
+                         get_small_scale_baseline_landscape)
+    if a.landscape:
+        cfg = get_small_scale_baseline_landscape()
+    elif a.scale == "small":
+        cfg = get_small_scale_baseline()
+    else:
+        cfg = get_large_scale_baseline()
+    run_baseline(cfg, skip_clip=a.skip_clip)
 

@@ -97,11 +97,22 @@ def measure_similarity(images, prompt, model, clip_preprocess, tokenizer, device
 
 
 def get_dataset(args):
+    # Support multi-category prompts (local, no download)
+    if 'category' in args.dataset.lower():
+        try:
+            from category_prompts import get_random_prompts
+            seed = getattr(args, 'gen_seed', 42)
+            dataset = get_random_prompts(max(getattr(args, 'end', 50), 50), seed=seed)
+            prompt_key = 'prompt'
+        except ImportError:
+            print("Warning: category_prompts not found. Falling back to Gustavosta.")
+            dataset = load_dataset("Gustavosta/Stable-Diffusion-Prompts")['test']
+            prompt_key = 'Prompt'
     # Support landscape-only prompts (local, no download)
-    if 'landscape' in args.dataset.lower():
+    elif 'landscape' in args.dataset.lower():
         try:
             from landscape_prompts import get_prompts
-            prompts = get_prompts(0, 1000)  # Cycle prompts for larger scales
+            prompts = get_prompts(0, 1000)
             dataset = [{'prompt': p} for p in prompts]
             prompt_key = 'prompt'
         except ImportError:
@@ -244,7 +255,7 @@ def inject_watermark(init_latents_w, watermarking_mask, gt_patch, args):
         init_latents_w[watermarking_mask] = gt_patch[watermarking_mask].clone()
         return init_latents_w
     else:
-        NotImplementedError(f'w_injection: {args.w_injection}')
+        raise NotImplementedError(f'w_injection: {args.w_injection}')
 
     init_latents_w = torch.fft.ifft2(torch.fft.ifftshift(init_latents_w_fft, dim=(-1, -2))).real
 
@@ -261,13 +272,13 @@ def eval_watermark(reversed_latents_no_w, reversed_latents_w, watermarking_mask,
         reversed_latents_w_fft = reversed_latents_w
         target_patch = gt_patch
     else:
-        NotImplementedError(f'w_measurement: {args.w_measurement}')
+        raise NotImplementedError(f'w_measurement: {args.w_measurement}')
 
     if 'l1' in args.w_measurement:
         no_w_metric = torch.abs(reversed_latents_no_w_fft[watermarking_mask] - target_patch[watermarking_mask]).mean().item()
         w_metric = torch.abs(reversed_latents_w_fft[watermarking_mask] - target_patch[watermarking_mask]).mean().item()
     else:
-        NotImplementedError(f'w_measurement: {args.w_measurement}')
+        raise NotImplementedError(f'w_measurement: {args.w_measurement}')
 
     return no_w_metric, w_metric
 

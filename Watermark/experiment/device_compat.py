@@ -15,7 +15,7 @@ def get_device():
     return "cpu"
 
 def _needs_fp32_fft(device):
-    return device == "mps"
+    return device in ("mps", "cpu")
 
 def get_watermarking_pattern(pipe, args, device, shape=None):
     if _needs_fp32_fft(device):

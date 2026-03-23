@@ -3,7 +3,8 @@ from dataclasses import dataclass, field
 from typing import Optional, List
 
 # Add support for landscape-only dataset (optional alternative to Gustavosta)
-DATASET_LANDSCAPE = "landscape"  # Placeholder dataset name
+DATASET_LANDSCAPE = "landscape"
+DATASET_CATEGORY = "category"   # Multi-category random prompts (landscape, face, teddy, cat, dog, mountains, garden, scenery)
 
 @dataclass
 class WatermarkConfig:
@@ -46,6 +47,7 @@ class ExperimentConfig:
     reference_model_pretrain: Optional[str] = "laion2b_s12b_b42k"
     watermark: WatermarkConfig = field(default_factory=WatermarkConfig)
     attacks: List[AttackConfig] = field(default_factory=list)
+    dataset: str = "Gustavosta/Stable-Diffusion-Prompts"
     checkpoint_every: int = 5
     checkpoint_dir: str = "checkpoints"
     results_dir: str = "results"
@@ -78,7 +80,7 @@ EXTENDED_ATTACKS = BASIC_ATTACKS + [
 def get_small_scale_baseline():
     """Paper-exact baseline: DDIM, r=10, 50 steps, single channel."""
     return ExperimentConfig(
-        name="small_baseline", approach="baseline", start=0, end=10,
+        name="small_baseline", approach="baseline", start=0, end=5,
         num_inference_steps=50, test_num_inference_steps=50,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=BASIC_ATTACKS, checkpoint_every=5)
@@ -86,7 +88,7 @@ def get_small_scale_baseline():
 def get_small_scale_optimized():
     """Optimized: 100 DDIM steps for more accurate inversion; r=10 kept (safe for real images)."""
     return ExperimentConfig(
-        name="small_optimized", approach="optimized", start=0, end=10,
+        name="small_optimized", approach="optimized", start=0, end=5,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=BASIC_ATTACKS, checkpoint_every=5)
@@ -94,7 +96,7 @@ def get_small_scale_optimized():
 def get_large_scale_baseline():
     """Paper-exact baseline, large scale."""
     return ExperimentConfig(
-        name="large_baseline", approach="baseline", start=0, end=100,
+        name="large_baseline", approach="baseline", start=0, end=50,
         num_inference_steps=50, test_num_inference_steps=50,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=EXTENDED_ATTACKS, checkpoint_every=10)
@@ -102,21 +104,16 @@ def get_large_scale_baseline():
 def get_large_scale_optimized():
     """Optimized, large scale."""
     return ExperimentConfig(
-        name="large_optimized", approach="optimized", start=0, end=100,
+        name="large_optimized", approach="optimized", start=0, end=50,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(w_channel=3, w_pattern="ring", w_radius=10),
         attacks=EXTENDED_ATTACKS, checkpoint_every=10)
 
 
 def get_small_scale_multiring():
-    """Multi-ring: two rotation-invariant Fourier bands + 100 DDIM steps.
-    Inner band (r=0..4): survives heavy cropping (near-DC energy).
-    Outer band (r=6..10): carries the distinct signal for detection.
-    Gap at r=5 keeps the two bands spectrally separate.
-    Still rotation-invariant because both bands are annuli.
-    """
+    """Multi-ring: two rotation-invariant Fourier bands + 100 DDIM steps."""
     return ExperimentConfig(
-        name="small_multi_ring", approach="multi_ring", start=0, end=10,
+        name="small_multi_ring", approach="multi_ring", start=0, end=5,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(
             w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
@@ -127,7 +124,7 @@ def get_small_scale_multiring():
 def get_large_scale_multiring():
     """Multi-ring, large scale."""
     return ExperimentConfig(
-        name="large_multi_ring", approach="multi_ring", start=0, end=100,
+        name="large_multi_ring", approach="multi_ring", start=0, end=50,
         num_inference_steps=100, test_num_inference_steps=100,
         watermark=WatermarkConfig(
             w_channel=3, w_pattern="ring", w_mask_shape="multi_ring",
@@ -142,8 +139,8 @@ def get_small_scale_baseline_landscape():
     """Baseline with landscape prompts (no dataset download needed)."""
     cfg = get_small_scale_baseline()
     cfg.name = "small_baseline_landscape"
-    cfg.reference_model = None  # Skip CLIP for faster iteration
-    # The dataset will be set to "landscape" in run_baseline.py --dataset flag
+    cfg.dataset = DATASET_LANDSCAPE
+    cfg.reference_model = None
     return cfg
 
 
@@ -151,6 +148,7 @@ def get_small_scale_optimized_landscape():
     """Optimized with landscape prompts."""
     cfg = get_small_scale_optimized()
     cfg.name = "small_optimized_landscape"
+    cfg.dataset = DATASET_LANDSCAPE
     cfg.reference_model = None
     return cfg
 
@@ -159,5 +157,81 @@ def get_small_scale_multiring_landscape():
     """Multi-ring with landscape prompts."""
     cfg = get_small_scale_multiring()
     cfg.name = "small_multi_ring_landscape"
+    cfg.dataset = DATASET_LANDSCAPE
     cfg.reference_model = None
+    return cfg
+
+
+# ==============================================================================
+# CATEGORY VARIANTS (random prompts from: landscape, human_face, teddy, cat,
+#                    dog, mountains, garden, scenery)
+# small = 5 images, large = 50 images, no dataset download needed
+# ==============================================================================
+def get_small_scale_baseline_category():
+    cfg = get_small_scale_baseline()
+    cfg.name = "small_baseline_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+def get_small_scale_optimized_category():
+    cfg = get_small_scale_optimized()
+    cfg.name = "small_optimized_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+def get_small_scale_multiring_category():
+    cfg = get_small_scale_multiring()
+    cfg.name = "small_multi_ring_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+def get_large_scale_baseline_category():
+    cfg = get_large_scale_baseline()
+    cfg.name = "large_baseline_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+def get_large_scale_optimized_category():
+    cfg = get_large_scale_optimized()
+    cfg.name = "large_optimized_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+def get_large_scale_multiring_category():
+    cfg = get_large_scale_multiring()
+    cfg.name = "large_multi_ring_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    return cfg
+
+
+# ==============================================================================
+# ALL-CHANNEL VARIANTS (w_channel=-1 uses all 4 Fourier channels instead of
+# just channel 3 — gives 4x more signal, expected to fix rotation weakness)
+# ==============================================================================
+def get_small_scale_multiring_allchan_category():
+    cfg = get_small_scale_multiring()
+    cfg.name = "small_multi_ring_allchan_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    cfg.watermark.w_channel = -1
+    return cfg
+
+
+def get_large_scale_multiring_allchan_category():
+    cfg = get_large_scale_multiring()
+    cfg.name = "large_multi_ring_allchan_category"
+    cfg.dataset = DATASET_CATEGORY
+    cfg.reference_model = None
+    cfg.watermark.w_channel = -1
     return cfg
