@@ -1,0 +1,89 @@
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Societal Context and Regulatory Landscape}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}The Technical Challenge of Source-Side Watermarking}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Tree-Ring: Source-Side Watermarking for Diffusion Models}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Limitations of the Original Work}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Our Contributions}{5}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Research Questions}{5}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Paper Organisation}{5}{subsection.1.7}%
+\contentsline {section}{\numberline {2}Related Work}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Classical Spread-Spectrum Watermarking}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Deep Learning-Based Post-Hoc Watermarking}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Source-Side Watermarking for Generative Models}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Robustness and Attack Taxonomies}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}AI-Generated Content Detection Without Watermarks}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}LLM Watermarking and Cross-Modal Parallels}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Comparative Analysis of Watermarking Paradigms}{7}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Positioning of Our Work}{7}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Background and Preliminaries}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Latent Diffusion Models}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}DDIM Deterministic Sampling}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}DDIM Inversion}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Tree-Ring Watermarking in Detail}{8}{subsection.3.4}%
+\contentsline {paragraph}{Why the ring pattern?}{8}{section*.3}%
+\contentsline {subsection}{\numberline {3.5}Evaluation Metrics and Threat Model}{8}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Threat Model}{8}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Metrics}{8}{subsubsection.3.5.2}%
+\contentsline {section}{\numberline {4}Theoretical Analysis}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Formalising the Inversion Error}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Frequency-Domain Analysis of Crop Attacks}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Frequency-Domain Analysis of Blur and JPEG Attacks}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}SNR Analysis of All-Channel Embedding}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Theoretical Analysis of Rotation Attacks}{10}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Theoretical Analysis of Additive Noise Attacks}{11}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Methodology}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Config~B: Baseline Paper-Exact Replication}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Config~O: Step Count Optimisation ($N$: 50~$\to $~100)}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Config~MR: Dual-Band Multi-Ring Mask}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Config~MR-AC: All-Channel Embedding}{12}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Algorithm Specification}{12}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Computational Complexity Analysis}{12}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Dataset and Generation Protocol}{13}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Attack Protocol}{13}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Configuration Summary}{13}{subsection.5.9}%
+\contentsline {section}{\numberline {6}Experimental Setup}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Hardware and Software Environment}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Checkpointing and Reproducibility}{15}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Per-Category Analysis}{15}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Project Planning and Teamwork}{15}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Experiments and Results}{16}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Visual Imperceptibility}{16}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Full AUC Results}{16}{subsection.7.2}%
+\contentsline {paragraph}{RQ1 -- Baseline replication.}{17}{section*.19}%
+\contentsline {paragraph}{RQ2 -- Step optimisation.}{17}{section*.20}%
+\contentsline {paragraph}{RQ3 -- Structural innovation.}{17}{section*.21}%
+\contentsline {subsection}{\numberline {7.3}AUC Visualisations}{17}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}ROC Curve Analysis}{17}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Score Distribution Analysis}{18}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Score Gap Visualisation}{18}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}TPR@1\%FPR Results}{18}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Head-to-Head Analysis}{19}{subsection.7.8}%
+\contentsline {section}{\numberline {8}Ablation Study}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Step Count Ablation}{20}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Mask Design Ablation}{20}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Channel Count Ablation}{21}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Spectral Gap and Inner Radius: Theoretical Justification}{21}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Summary: Ablation Interactions}{22}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Discussion}{22}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Why MR-AllChan Succeeds on Geometric Attacks}{22}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Why Gaussian Noise Remains Challenging}{22}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Security and Adversarial Robustness}{23}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Computational Cost Trade-offs}{23}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Semantic Agnosticism}{23}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Implications for Regulatory Compliance}{24}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Limitations}{24}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Ethical Considerations}{24}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Dual-Use, Surveillance, and Fairness}{24}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Probabilistic Nature of Watermark Evidence}{24}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Conclusions and Future Work}{24}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Summary of Findings}{24}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Key Take-Home Messages}{25}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Practical Deployment Recommendations}{25}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Future Work}{25}{subsection.11.4}%
+\contentsline {paragraph}{Noise-adaptive preprocessing (concrete experiment).}{25}{section*.35}%
+\contentsline {paragraph}{CLIP quality verification.}{25}{section*.36}%
+\contentsline {paragraph}{Adaptive adversarial evaluation.}{25}{section*.37}%
+\contentsline {paragraph}{Transfer to SDXL.}{25}{section*.38}%
+\contentsline {paragraph}{Multi-key per-user attribution.}{25}{section*.39}%
+\contentsline {paragraph}{C2PA integration.}{25}{section*.40}%
+\contentsline {paragraph}{Error-correcting key structure.}{25}{section*.41}%
