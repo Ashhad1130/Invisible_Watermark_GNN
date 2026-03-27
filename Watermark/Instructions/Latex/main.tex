@@ -176,7 +176,7 @@ robustness evaluation.
 
 \section{Introduction}
 \label{sec:intro}
-\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 
 The capacity of modern generative models to synthesize photorealistic
@@ -216,7 +216,7 @@ The United States Executive Order on Trustworthy Artificial Intelligence
 watermarking and content provenance within one year.
 The Coalition for Content Provenance and Authenticity (C2PA) standard
 is now being adopted by Adobe, Microsoft, Google, and major news
-organizations to attach cryptographic provenance metadata to media at
+organisations to attach cryptographic provenance metadata to media at
 creation time.
 In China, the Provisions on the Management of Deep Synthesis Internet
 Information Services (2023) similarly mandate watermarking of
@@ -230,7 +230,7 @@ societal necessity.
 
 Modern text-to-image generation is predominantly based on the
 \textit{diffusion model} paradigm. Diffusion models are a class of deep
-generative models that synthesize data by learning to reverse a gradual
+generative models that synthesise data by learning to reverse a gradual
 noising process: an input is progressively corrupted with Gaussian noise,
 and a neural network is trained to iteratively denoise
 this signal to recover realistic samples (reverse process)
@@ -287,7 +287,7 @@ JPEG compression at quality factor 25 (a common social media setting)
 removes most LSB-based watermarks.
 Geometric transformations such as rotation, crop, or scaling, misalign the
 watermark pattern with any fixed reference grid.
-Color adjustments change pixel-level statistics.
+Colour adjustments change pixel-level statistics.
 Each of these operations is a routine, non-adversarial post-processing
 step in the image distribution pipeline.
 
@@ -430,9 +430,9 @@ the challenge is that the two proposed modifications act on
 different parts of the system and may therefore interact in complementary
 or conflicting ways.
 
-\subsection{Paper Organization}
+\subsection{Paper Organisation}
 
-Section~\ref{sec:overview} provides an overview of the proposed approach
+Section~\ref{sec:overview} provides an overview of the proposed approach.
 Section~\ref{sec:related} surveys related work on watermarking for
 generative models.
 Section~\ref{sec:bg} provides technical background on LDMs, DDIM,
@@ -444,13 +444,15 @@ Section~\ref{sec:setup} describes the experimental setup.
 Section~\ref{sec:results} presents full quantitative results.
 Section~\ref{sec:ablation} reports ablation studies.
 Section~\ref{sec:discussion} discusses broader implications.
+Section~\ref{sec:ethics} addresses ethical considerations related to
+watermarking.
 Section~\ref{sec:conclusion} concludes with future directions.
 
 % ============================================================
 
 \section{Overview of the Approach}
 \label{sec:overview}
-\textit{Main contributor: Maria Alejandra Pabon}
+\textit{Main contributor: Maria Alejandra Pabon.}
 
 This work begins with a faithful replication of \emph{Tree-Ring
 Watermarking} as introduced by Wen et al.~\cite{wen2023treering}.
@@ -495,7 +497,7 @@ pipeline shared by all configurations.
 
 \section{Related Work}
 \label{sec:related}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Classical Spread-Spectrum Watermarking}
 
@@ -1538,7 +1540,7 @@ most challenging attack type for Fourier-domain watermarking.
 % ============================================================
 \section{Methodology}
 \label{sec:methods}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Config~B: Baseline Paper-Exact Replication}
 \label{sec:baseline}
@@ -1895,10 +1897,36 @@ new modification to the previous.
 \end{table}
 
 
+\subsection{Success Criteria}
+
+We define success at three levels, corresponding directly to our
+research questions.
+
+\textbf{Replication success.}
+For Config~B, success means reproducing the AUC values reported by
+Wen et al.~\cite{wen2023treering} within $\pm 0.01$ on the seven
+paper-reported attack conditions.
+
+\textbf{Improvement success.}
+For Configs~O, MR, and MR-AC, success means improving robustness
+relative to the baseline on the attack classes targeted by each
+modification.
+In particular, step-count optimisation is expected to improve
+inversion-sensitive attacks, while the dual-band mask and all-channel
+embedding are expected to improve crop and rotation robustness.
+
+\textbf{Practical success.}
+A configuration is considered practically stronger if it improves not
+only AUC, but also balanced accuracy and TPR@1\%FPR, while preserving
+visual imperceptibility and avoiding substantial additional inference
+cost.
+For this reason, our evaluation prioritises not only overall ranking
+metrics, but also the low-FPR operating regime relevant to deployment.
+
 % ============================================================
 \section{Experimental Setup}
 \label{sec:setup}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Hardware and Software Environment}
 
@@ -1914,6 +1942,14 @@ consistent with the standard signal processing convention).
 DFT centering is a critical implementation detail: placing DC at the
 corner rather than the centre (the NumPy default without \texttt{fftshift})
 was a bug caught during peer code review.
+In addition to the main experimental runs, we conducted a small-scale
+pilot study in a Google Colab environment using an NVIDIA A100 GPU.
+This preliminary experiment used a small dataset of 5 images and was
+intended to verify the implementation and observe the general trend of
+the results before launching the full evaluation on the main setup.
+Although these small runs were not used for the final version, 
+they were useful for confirming that the relative behaviour of
+the configurations was consistent.
 
 Each 100-step configuration required approximately 28--30 minutes per
 attack condition (50 watermarked + 50 non-watermarked images, processed
@@ -2037,8 +2073,9 @@ figure generation.
 
 \textbf{Ashhad} led the baseline implementation, all-channel extension,
 and checkpoint/resume mechanism.
-\textbf{Maria Alejandra} conducted the literature survey and wrote
-Related Work, Background, and Conclusions.
+\textbf{Maria Alejandra} conducted the literature survey, evaluation 
+of results using a small image dataset and wrote some 
+of the main sections in the report.
 \textbf{Saliq} designed the dual-band mask, derived the theoretical
 analysis (Section~\ref{sec:theory}), and implemented analysis scripts.
 All members cross-validated results and reviewed the full report.
@@ -2087,7 +2124,7 @@ saving approximately 3 person-days.
 % ============================================================
 \section{Experiments and Results}
 \label{sec:results}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \noindent\textbf{Research question answers (preview).}
 \textbf{RQ1} (\textit{replication}): \textbf{Yes} --- Baseline reproduces
@@ -2113,6 +2150,32 @@ PASS/WARN boundary (0.80) as statistically uncertain: a value of 0.78
 is indistinguishable from 0.80 at this sample size.
 WARN vs.\ PASS distinctions near this boundary are directional indicators
 only, not definitive conclusions.
+
+\subsection{Experimental Design and Rationale}
+
+The experiments were designed to isolate the contribution of each
+proposed modification while keeping all other factors fixed.
+To answer \textbf{RQ1}, we compare the Baseline configuration directly
+against the seven attack conditions reported by Wen et al., using AUC as
+the primary replication metric.
+To answer \textbf{RQ2}, we compare Baseline and Optimized, which differ
+only in DDIM step count ($N{=}50$ vs.\ $N{=}100$), allowing the effect
+of inversion accuracy to be measured independently of mask or channel
+changes.
+To answer \textbf{RQ3}, we compare Multi-Ring and MR-AllChan against the
+earlier configurations, isolating the effect of dual-band masking and
+all-channel embedding on the baseline failure cases, especially crop and
+rotation attacks.
+
+All configurations are evaluated on the same 50 prompts, the same seeds,
+and the same 13 attack conditions.
+This controlled design ensures that observed performance differences are
+attributable to the configuration changes rather than to prompt
+variation or stochastic differences in generation.
+We report AUC as the primary ranking metric, TPR@1\%FPR as the
+deployment-oriented operating-point metric, and balanced accuracy as an
+additional threshold-based measure.
+
 
 \subsection{Visual Imperceptibility}
 
@@ -2903,7 +2966,16 @@ these hyperparameters is left for future work.
 % ============================================================
 \section{Discussion}
 \label{sec:discussion}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributor: Ashhad Raza Quadri, Maria Alejandra Pabon.}
+
+This section interprets the main empirical findings in relation to the
+research questions and broader deployment setting.
+We first explain why the proposed modifications improve robustness under
+geometric attacks, then discuss the remaining challenge of additive
+noise, the security boundaries of the method, and its practical and
+regulatory implications.
+We conclude with limitations that should guide the interpretation of the
+results.
 
 \subsection{Why MR-AllChan Succeeds on Geometric Attacks}
 
@@ -3103,6 +3175,19 @@ Achieving TPR@1\%FPR $\geq$0.80 on aggressive geometric attacks
 will require error-correcting key encoding or geometric preprocessing,
 and is left as future work.
 
+\subsection{Main Interpretation}
+
+Taken together, the results show that the main weakness of baseline
+Tree-Ring watermarking is not the invisibility of the watermark, but
+its lack of redundancy under geometric distortion.
+The proposed extensions address this weakness in two complementary ways:
+the dual-band mask improves robustness by distributing signal across
+frequency regions, while all-channel embedding improves robustness by
+aggregating signal across latent channels.
+The remaining failure mode under additive Gaussian noise suggests that
+future improvements should focus less on geometric redundancy and more
+on noise correction.
+
 \subsection{Limitations}
 
 \begin{enumerate}
@@ -3137,13 +3222,13 @@ and is left as future work.
 % ============================================================
 \section{Ethical Considerations}
 \label{sec:ethics}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Dual-Use, Surveillance, and Fairness}
 
-Invisible watermarking is inherently a surveillance technology: it
-allows the service provider to track provenance of every generated
-image without the creator's awareness.
+Invisible watermarking can function as a surveillance technology,
+because it allows the service provider to trace the provenance of
+generated images without requiring active participation from the user.
 While this enables legitimate uses (content moderation, IP protection),
 the same infrastructure can be misused for population profiling or
 chilling of political speech.
@@ -3153,12 +3238,18 @@ We recommend that deployments include transparency reporting (annual
 disclosure of law enforcement uses) and user-facing verification tools
 (ability to confirm a watermark is present, though not remove it).
 
-Fairness is a secondary concern: if non-watermarked image Fourier spectra
+Fairness is another relevant concern: if non-watermarked image Fourier spectra
 vary systematically by semantic category, false positive rates may be
 disparate across content types.
 Our 8-category dataset found no evidence of this, but the sample
 ($n{\approx}6$ per category) is too small for a powered analysis.
 A production audit should evaluate $\geq$1000 images per category.
+
+In addition, responsible deployment requires transparency and
+accountability.
+Users should be informed when provenance signals are embedded, and
+high-stakes uses of watermark detection should include human review,
+confidence reporting, and mechanisms for contesting false attributions.
 
 \subsection{Probabilistic Nature of Watermark Evidence}
 
@@ -3177,7 +3268,7 @@ the quantitative foundation for calibrating this uncertainty.
 % ============================================================
 \section{Conclusions and Future Work}
 \label{sec:conclusion}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Summary of Findings}
 
@@ -3212,8 +3303,9 @@ The dual-band mask (via spectral redundancy) and all-channel embedding
   \item \textbf{Source-side Fourier watermarking works robustly at scale.}
     Under blur, JPEG, and brightness attacks --- the most common
     real-world image processing operations --- all configurations
-    achieve AUC $= 1.0$, confirming that the method is production-ready
-    for these common attack modes.
+    achieve AUC $= 1.0$, showing that the method is highly robust 
+    under these common attack modes and promising for practical
+    deployment in such settings.
 
   \item \textbf{All-channel embedding is the most impactful single change.}
     It contributes 7 of MR-AllChan's 8 AUC wins, costs nothing at
@@ -3302,6 +3394,16 @@ deployments under EU AI Act and C2PA-mandated scenarios.
 Embedding a Reed-Solomon or LDPC code in the complex key $k$ would
 allow recovery of the original pattern from noisy estimates, directly
 addressing the Gaussian noise challenge without requiring preprocessing.
+
+These findings suggest that source-side Fourier
+watermarking is a promising direction for practical AI-image provenance,
+especially when robustness is enhanced through frequency-band and
+channel redundancy.
+At the same time, the remaining difficulty under additive noise and
+stronger adaptive attacks shows that this approach should be viewed as
+an evolving defence layer rather than a final solution.
+Future work should therefore focus on noise robustness, adaptive
+security evaluation, and deployment-grade threshold calibration.
 
 % ============================================================
 \bibliographystyle{ieeetr}
