@@ -6,6 +6,7 @@
 % ============================================================
 \documentclass[10pt,twocolumn]{article}
 
+
 %-- IEEE-like page geometry (manual, no geometry package) --%
 \setlength{\oddsidemargin}{-0.04cm}
 \setlength{\evensidemargin}{-0.04cm}
@@ -61,28 +62,54 @@
 \pagenumbering{arabic}
 
 % ============================================================
+
 \begin{document}
 
-%-- Full-width title block (one-column preamble) --%
-\twocolumn[{%
-\begin{center}
-  {\LARGE\bfseries
-    Invisible Watermarking for AI-Generated Images:\\[5pt]
-    Replicating and Extending Tree-Ring Watermarks\\[5pt]
-    with Dual-Band and All-Channel Fourier Embedding\par}
-  \vspace{10pt}
-  {\normalsize
-    \textbf{Ashhad Raza Quadri}~(Matriculation:~4756039,~\textit{Primary Author}) \quad
-    Maria Alejandra Pabon Galindo~(Matriculation:~4756044) \quad
-    Saliq~(Matriculation:~11111)\par}
-  \vspace{4pt}
-  {\small
+% ---------------- FRONT PAGE ----------------
+\begin{titlepage}
+    \centering
+    
+    \vspace*{2cm}
+    
+    {\LARGE \textbf{Invisible Watermarking for AI-Generated Images: Replicating and Extending Tree-Ring Watermarks with Dual-Band and All-Channel Fourier Embedding}\par}
+    
+    \vspace{2cm}
+    
+    {\large
+    Ashhad Raza Quadri\\
+    Matriculation Number: 4756039\\[0.5cm]
+    Maria Alejandra Pabon Galindo\\
+    Matriculation Number: 4756044\\[0.5cm]
+    Saliq\\
+    Matriculation Number: 11111
+    \par}
+    
+    \vspace{2.5cm}
+    
+    {\large
+    \textbf{Repository:} \\
+    \url{https://github.com/Ashhad1130/Invisible_Watermark_GNN}
+    \par}
+    
+    \vspace{2.5cm}
+    
+    {\large
     \textit{Generative Neural Networks for the Sciences,
     Winter Semester 2025/26,
-    Ruprecht-Karls-Universit\"at Heidelberg.}\\
-    Repository:~\url{https://github.com/Ashhad1130/Invisible_Watermark_GNN} \quad Submitted: March 30, 2026.\par}
-  \vspace{8pt}
-\end{center}
+    Ruprecht-Karls-Universit\"at Heidelberg.}
+    \par}
+    
+    \vspace{3cm}
+    
+    {\large
+    \textbf{Submitted:} March 30, 2026
+    \par}
+    
+    \vfill
+\end{titlepage}
+
+\onecolumn
+
 \noindent\hrulefill\vspace{4pt}
 
 \noindent\textbf{Abstract---}
@@ -133,34 +160,51 @@ invisible watermarking, latent diffusion models, DDIM inversion,
 Fourier fingerprinting, Tree-Ring, dual-band spectral embedding,
 all-channel embedding, image provenance, AI-generated content detection,
 robustness evaluation.
+
 \vspace{6pt}\noindent\hrulefill\vspace{8pt}
-}]
+
+\newpage
 
 % ============================================================
 %-- Table of Contents (required by guidelines) --%
 {\onecolumn\tableofcontents\twocolumn}
 
 % ============================================================
+
+% ---------------- ABSTRACT ----------------
+
+
 \section{Introduction}
 \label{sec:intro}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon}
 
-\subsection{Societal Context and Regulatory Landscape}
 
-The capacity of modern generative models to synthesise photorealistic
+The capacity of modern generative models to synthesize photorealistic
 images has grown dramatically over the past five years.
-Latent diffusion models (LDMs) such as Stable
-Diffusion~\cite{rombach2022ldm} and Imagen~\cite{saharia2022imagen}
+Latent diffusion models (LDMs) such as Stable Diffusion
+~\cite{rombach2022ldm} and Imagen~\cite{saharia2022imagen}
 can now produce images that are indistinguishable from photographs in
-blind human evaluations, with creative quality rivalling or surpassing
+blind human evaluations, with creative quality rivaling or surpassing
 professional photographers and artists in many domains.
+This can be done  with just a natural language prompt that describes 
+what you want to see in the image, thereby narrowing the gap between
+language and vision~\cite{fan2025trustworthiness}.
+Generative AI can 
+ne used to improve effectiveness, efficiency, and creativity
+in various activities such as image generation, image super-resolution, 
+image inpainting, or image editing~\cite{10081412}.
 This capability, while transformative for legitimate creative industries,
 simultaneously enables a range of harmful applications.
 Deepfake videos of political figures have been used to influence
 elections; fabricated scientific imagery has appeared in peer-reviewed
-publications; non-consensual intimate synthetic imagery has been weaponised
+publications; non-consensual intimate synthetic imagery has been weaponized
 for harassment; and misinformation campaigns now use AI-generated
-photographs as apparent visual evidence.
+photographs as apparent visual evidence. Furthermore, AI-generated images
+can be misused in more subtle but widespread ways: individuals may falsely
+claim generated content as their own work, students may rely on such images
+to complete or assist with academic assignments or assessments, and users
+may distribute synthetic content while asserting ownership or copyright
+~\cite{jiang2023evading}.
 
 The regulatory response has been swift and global.
 The European Union's AI Act (effective August 2024) mandates disclosure
@@ -172,7 +216,7 @@ The United States Executive Order on Trustworthy Artificial Intelligence
 watermarking and content provenance within one year.
 The Coalition for Content Provenance and Authenticity (C2PA) standard
 is now being adopted by Adobe, Microsoft, Google, and major news
-organisations to attach cryptographic provenance metadata to media at
+organizations to attach cryptographic provenance metadata to media at
 creation time.
 In China, the Provisions on the Management of Deep Synthesis Internet
 Information Services (2023) similarly mandate watermarking of
@@ -181,6 +225,42 @@ AI-generated content at the service provider level.
 Against this backdrop, reliable, invisible, and robust watermarking
 of AI-generated images is both a technical challenge and a pressing
 societal necessity.
+
+\subsection{Technical Context}
+
+Modern text-to-image generation is predominantly based on the
+\textit{diffusion model} paradigm. Diffusion models are a class of deep
+generative models that synthesize data by learning to reverse a gradual
+noising process: an input is progressively corrupted with Gaussian noise,
+and a neural network is trained to iteratively denoise
+this signal to recover realistic samples (reverse process)
+~\cite{10081412}. In practice, efficient image generation often relies
+on DDIM sampling, which provides a faster and partially deterministic
+alternative to standard stochastic diffusion sampling
+~\cite{song2021denoising}.
+
+Within this framework, \textit{watermarking} aims to embed an
+imperceptible signal into generated images in order to enable reliable
+attribution of their origin. An effective watermark must remain visually
+undetectable while being robust to common image transformations such as
+compression, cropping, or geometric distortions~\cite{NEURIPS2024}.
+Unlike traditional post-processing approaches, diffusion-based methods
+allow watermark signals to be incorporated directly into the generation
+process, enabling stronger coupling between the watermark and the image
+content.
+
+A representative approach in this setting is \textit{source-side
+watermarking}, where the signal is embedded not in the final image but
+in the generative process itself. In diffusion models, this can be
+achieved by modifying the \emph{initial noise latent} that seeds the
+generation trajectory. Because the entire image is derived from this
+latent through iterative denoising, any structured signal embedded in it
+can propagate through the process and become implicitly encoded in the
+final output. However, watermarking diffusion models is inherently challenging.
+The stochastic nature of generation, the high-dimensional latent space,
+and the sensitivity of inversion procedures make it difficult to design
+signals that are both robust and reliably detectable.
+
 
 \subsection{The Technical Challenge of Source-Side Watermarking}
 
@@ -205,9 +285,9 @@ Second, even without regeneration, post-hoc invisible watermarks are
 fragile under common image processing.
 JPEG compression at quality factor 25 (a common social media setting)
 removes most LSB-based watermarks.
-Geometric transformations (rotation, crop, scaling) misalign the
+Geometric transformations such as rotation, crop, or scaling, misalign the
 watermark pattern with any fixed reference grid.
-Colour adjustments change pixel-level statistics.
+Color adjustments change pixel-level statistics.
 Each of these operations is a routine, non-adversarial post-processing
 step in the image distribution pipeline.
 
@@ -333,11 +413,26 @@ where it helps and where it hurts?
 
 \textbf{RQ3} \textit{(Structural Innovation):}
 Does the combination of a dual-band Fourier mask and all-channel
-embedding resolve all Baseline FAIL conditions on crop and rotation
+embedding resolve all baseline failure cases on crop and rotation
 attacks, and are the two modifications synergistic?
 
-\subsection{Paper Organisation}
+For RQ1 reproducibility is a necessary condition for
+any meaningful extension: if the baseline cannot be reproduced
+faithfully, later improvements cannot be interpreted correctly.
+For RQ2 DDIM inversion is the core mechanism underlying
+detection, and its numerical accuracy may directly affect robustness.
+However, its effect is difficult to predict in advance, since more
+accurate inversion may improve recovery of the watermark signal while
+also more faithfully reconstructing attack artefacts.
+In RQ3 the baseline is weakest under crop and rotation
+attacks, which are common in real-world image processing;
+the challenge is that the two proposed modifications act on
+different parts of the system and may therefore interact in complementary
+or conflicting ways.
 
+\subsection{Paper Organization}
+
+Section~\ref{sec:overview} provides an overview of the proposed approach
 Section~\ref{sec:related} surveys related work on watermarking for
 generative models.
 Section~\ref{sec:bg} provides technical background on LDMs, DDIM,
@@ -351,8 +446,53 @@ Section~\ref{sec:ablation} reports ablation studies.
 Section~\ref{sec:discussion} discusses broader implications.
 Section~\ref{sec:conclusion} concludes with future directions.
 
+% ============================================================
+
+\section{Overview of the Approach}
+\label{sec:overview}
+\textit{Main contributor: Maria Alejandra Pabon}
+
+This work begins with a faithful replication of \emph{Tree-Ring
+Watermarking} as introduced by Wen et al.~\cite{wen2023treering}.
+In the baseline setting, a secret watermark is embedded into the
+Fourier spectrum of the initial diffusion latent, and detection is
+performed by DDIM inversion followed by masked L1 comparison in the
+Fourier domain.
+The method requires no modification of the
+underlying diffusion model and operates entirely by altering the
+initial noise used to seed the generation trajectory.
+
+Building on this baseline, we study three progressive modifications.
+First, we increase the DDIM step count from $N{=}50$ to $N{=}100$
+for both generation and inversion, so it reduces the inversion 
+error and improve the recovery of the embedded watermark signal.
+Second, we replace the baseline single-band circular mask with a
+dual-band mask consisting of an inner low-frequency disc and an outer
+ring introducing spectral redundancy: if one frequency region is
+degraded by an attack such as cropping, the other may still preserve
+discriminative watermark information.
+Third, we extend watermark embedding and detection from a single latent
+channel to all four latent channels increasing the effective 
+signal-to-noise ratio of the detector,
+especially under geometric distortions such as rotation, where
+single-channel phase error can be substantial.
+
+This follows a progressive four-configuration space:
+\emph{Baseline} (paper-accurate Tree-Ring replication),
+\emph{Optimized} (increased DDIM step count),
+\emph{Multi-Ring} (dual-band mask), and
+\emph{MR-AllChan} (dual-band mask with all-channel embedding).
+The central hypothesis of this work is that robustness can be improved
+by combining three complementary forms of redundancy:
+more accurate inversion in the time domain, multi-band structure in the
+frequency domain, and multi-channel aggregation in the latent space,
+while preserving the training-free nature of Tree-Ring watermarking.
+
+Figure~\ref{fig:pipeline} shows the common embedding and detection
+pipeline shared by all configurations.
 
 % ============================================================
+
 \section{Related Work}
 \label{sec:related}
 \textit{Main contributor: Ashhad Raza Quadri.}
@@ -585,7 +725,7 @@ reference implementation guide for practitioners deploying the method.
 % ============================================================
 \section{Background and Preliminaries}
 \label{sec:bg}
-\textit{Main contributor: Ashhad Raza Quadri.}
+\textit{Main contributors: Ashhad Raza Quadri, Maria Alejandra Pabon.}
 
 \subsection{Latent Diffusion Models}
 
@@ -847,6 +987,140 @@ of tree trunks) motivates the method's name.
   $k^{(0:3)}$) modify only the injection step, leaving the rest unchanged.}
 \label{fig:pipeline}
 \end{figure*}
+
+\subsection{Formal Problem Setup}
+
+We formalize source-side watermarking for diffusion-based image
+generation in the setting of latent diffusion models.
+
+\textbf{Generation process.}
+Let $z_T \sim \mathcal{N}(0,\mathbf{I})$ denote the initial noise latent
+at diffusion timestep $T$, and let $p$ denote the text prompt.
+A diffusion generator with $N$ DDIM steps defines a mapping
+\begin{equation}
+    x = G_N(z_T, p),
+\end{equation}
+where $x$ is the generated image.
+Under DDIM sampling, this mapping is approximately deterministic for
+fixed $z_T$, $p$, and $N$.
+
+\textbf{Watermark embedding.}
+Source-side watermarking modifies the initial latent before generation.
+Let $z_T^{(c)} \in \mathbb{R}^{h \times w}$ denote latent channel $c$,
+and let
+\begin{equation}
+    \hat{z}_T^{(c)} = \mathcal{F}(z_T^{(c)})
+\end{equation}
+be its Fourier representation.
+Let $M \in \{0,1\}^{h \times w}$ be a binary spectral mask and
+$k^{(c)} \in \mathbb{C}^{h \times w}$ a secret complex key.
+For each active channel $c \in \mathcal{C}$, watermarking is defined as
+\begin{equation}
+    \hat{z}_T^{w,(c)}
+    =
+    \hat{z}_T^{(c)} \circ (1-M) + k^{(c)} \circ M,
+    \label{eq:problem_embed}
+\end{equation}
+where $\circ$ denotes element-wise multiplication.
+The modified latent is then obtained by inverse Fourier transform:
+\begin{equation}
+    z_T^{w,(c)} = \mathcal{F}^{-1}\!\left(\hat{z}_T^{w,(c)}\right).
+\end{equation}
+Channels not in $\mathcal{C}$ remain unchanged.
+The final watermarked image is generated as
+\begin{equation}
+    x_w = G_N(z_T^w, p).
+\end{equation}
+
+This formulation covers all configurations studied in this work.
+For the baseline, $\mathcal{C}=\{3\}$ and $M$ is the single circular
+mask.
+For the dual-band variant, $M=M^{\mathrm{mr}}$.
+For MR-AllChan, $\mathcal{C}=\{0,1,2,3\}$ with independent keys
+$k^{(c)}$ for each channel.
+
+\textbf{Attack model.}
+After generation, the image may be modified by an attack operator
+$\mathcal{A}$:
+\begin{equation}
+    x^* = \mathcal{A}(x_w),
+\end{equation}
+where $\mathcal{A}$ represents standard image transformations such as
+JPEG compression, cropping, rotation, blurring, or additive noise.
+We assume a non-adaptive adversary who knows that watermarking may
+have been applied but does not know the secret key, the exact mask,
+or the active channel set.
+
+\textbf{Detection.}
+Given a suspect image $x^*$, the detector applies DDIM inversion with
+the same step count $N$ to recover an estimate of the initial latent:
+\begin{equation}
+    \tilde{z}_T = I_N(x^*).
+\end{equation}
+For each active channel $c \in \mathcal{C}$, the masked detection score
+is computed as
+\begin{equation}
+    d^{(c)}(x^*,k^{(c)})
+    =
+    \left\|
+    \mathcal{F}(\tilde{z}_T)^{(c)} \circ M
+    -
+    k^{(c)} \circ M
+    \right\|_1.
+\end{equation}
+For single-channel detection, the total score is simply $d=d^{(c)}$.
+For all-channel detection, scores are aggregated across channels:
+\begin{equation}
+    d(x^*) = \sum_{c \in \mathcal{C}} d^{(c)}(x^*,k^{(c)}).
+    \label{eq:problem_detect}
+\end{equation}
+A watermark is declared present if $d(x^*) \le \tau$ for a chosen
+threshold $\tau$.
+
+\textbf{Evaluation criteria.}
+A watermarking scheme is considered effective if it satisfies three
+requirements:
+\begin{itemize}
+    \item \textit{Imperceptibility}: watermark embedding should not
+    visibly degrade image quality;
+    \item \textit{Detectability}: watermarked and non-watermarked
+    images should be well separated by the detection score;
+    \item \textit{Robustness}: detection should remain reliable after
+    transformations $\mathcal{A}$.
+\end{itemize}
+
+This formulation connects the watermark injection mechanism, the
+inversion-based detector, and the robustness evaluation used in the
+remainder of the paper.
+
+\subsection{Evaluation Data}
+
+Our evaluation uses a locally constructed prompt dataset designed to
+test watermark robustness across diverse semantic content.
+Images are generated from prompts sampled equally across eight categories:
+landscapes, human faces, teddy bears, cats, dogs, mountain scenes,
+garden scenes, and coastal views.
+For each prompt, we generate paired watermarked and non-watermarked
+images using identical seeds, so that differences in detection
+performance can be attributed to the watermarking configuration rather
+than prompt variation.
+
+The dataset is curated specifically for controlled robustness
+evaluation rather than semantic benchmarking.
+Each sample is automatically annotated with its prompt category,
+watermark status, configuration, and attack condition.
+This design allows direct comparison across configurations under the
+same generation conditions and provides a balanced test bed for the
+research questions addressed in this work.
+
+These data are suitable for our project because:
+the paired generation protocol isolates the effect of watermark
+injection on detection performance, the use of multiple 
+semantic categories reduces the risk that
+results are driven by a narrow content domain, and the attack 
+annotations enable systematic evaluation of
+robustness under the exact transformations considered in our threat
+model.
 
 \subsection{Evaluation Metrics and Threat Model}
 
