@@ -1,0 +1,104 @@
+\begin{thebibliography}{10}
+
+\bibitem{wen2023treering}
+Y.~Wen, J.~Kirchenbauer, J.~Geiping, and T.~Goldstein, ``Tree-ring watermarks:
+  Fingerprints for diffusion images that are invisible and robust,'' in {\em
+  Advances in Neural Information Processing Systems (NeurIPS)}, 2023.
+
+\bibitem{rombach2022ldm}
+R.~Rombach, A.~Blattmann, D.~Lorenz, P.~Esser, and B.~Ommer, ``High-resolution
+  image synthesis with latent diffusion models,'' in {\em IEEE/CVF Conference
+  on Computer Vision and Pattern Recognition (CVPR)}, pp.~10684--10695, 2022.
+
+\bibitem{saharia2022imagen}
+C.~Saharia, W.~Chan, S.~Saxena, L.~Li, J.~Whang, E.~L. Denton, K.~Ghasemipour,
+  R.~Gontijo-Lopes, B.~K. Ayan, T.~Salimans, J.~Ho, D.~J. Fleet, and
+  M.~Norouzi, ``Photorealistic text-to-image diffusion models with deep
+  language understanding,'' in {\em Advances in Neural Information Processing
+  Systems (NeurIPS)}, 2022.
+
+\bibitem{fan2025trustworthiness}
+M.~Fan, C.~Wang, C.~Chen, Y.~Liu, and J.~Huang, ``On the trustworthiness
+  landscape of state-of-the-art generative models: A survey and outlook,'' {\em
+  International Journal of Computer Vision}, vol.~133, no.~7, pp.~4317--4348,
+  2025.
+
+\bibitem{10081412}
+F.-A. Croitoru, V.~Hondru, R.~T. Ionescu, and M.~Shah, ``Diffusion models in
+  vision: A survey,'' {\em IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.~45, no.~9, pp.~10850--10869, 2023.
+
+\bibitem{jiang2023evading}
+Z.~Jiang, J.~Zhang, and N.~Z. Gong, ``Evading watermark based detection of
+  ai-generated content,'' in {\em Proceedings of the 2023 ACM SIGSAC Conference
+  on Computer and Communications Security}, pp.~1168--1181, 2023.
+
+\bibitem{song2020ddim}
+J.~Song, C.~Meng, and S.~Ermon, ``Denoising diffusion implicit models,'' in
+  {\em International Conference on Learning Representations (ICLR)}, 2021.
+
+\bibitem{NEURIPS2024}
+H.~Huang, Y.~Wu, and Q.~Wang, ``Robin: Robust and invisible watermarks for
+  diffusion models with adversarial optimization,'' in {\em Advances in Neural
+  Information Processing Systems} (A.~Globerson, L.~Mackey, D.~Belgrave,
+  A.~Fan, U.~Paquet, J.~Tomczak, and C.~Zhang, eds.), vol.~37, pp.~3937--3963,
+  Curran Associates, Inc., 2024.
+
+\bibitem{cox1997watermarking}
+I.~J. Cox, J.~Kilian, F.~T. Leighton, and T.~Shamoon, ``Secure spread spectrum
+  watermarking for multimedia,'' {\em IEEE Transactions on Image Processing},
+  vol.~6, no.~12, pp.~1673--1687, 1997.
+
+\bibitem{zhu2018hidden}
+J.~Zhu, R.~Kaplan, J.~Johnson, and L.~Fei-Fei, ``{HiDDeN}: Hiding data with
+  deep networks,'' in {\em European Conference on Computer Vision (ECCV)},
+  pp.~682--697, 2018.
+
+\bibitem{tancik2020stegastamp}
+M.~Tancik, B.~Mildenhall, and R.~Ng, ``{StegaStamp}: Invisible hyperlinks in
+  physical photographs,'' in {\em IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition (CVPR)}, pp.~2117--2126, 2020.
+
+\bibitem{yu2021artificial}
+N.~Yu, V.~Koltun, L.~Davis, and M.~Fritz, ``Artificial fingerprinting for
+  generative models: Rooting deepfake attribution in training data,'' in {\em
+  IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pp.~14448--14457, 2021.
+
+\bibitem{fernandez2023stablediffusion}
+P.~Fernandez, G.~Couairon, H.~J{\'e}gou, M.~Douze, and T.~Furon, ``The stable
+  signature: Rooting watermarks in latent diffusion models,'' in {\em IEEE/CVF
+  International Conference on Computer Vision (ICCV)}, pp.~22466--22477, 2023.
+
+\bibitem{zhao2025sok}
+X.~Zhao, S.~Gunn, M.~Christ, J.~Fairoze, A.~Fabrega, N.~Carlini, S.~Garg,
+  S.~Hong, M.~Nasr, F.~Tramer, S.~Jha, L.~Li, Y.-X. Wang, and D.~Song, ``Sok:
+  Watermarking for ai-generated content,'' in {\em 2025 IEEE Symposium on
+  Security and Privacy (SP)}, pp.~2621--2639, 2025.
+
+\bibitem{zhao2023invisible}
+X.~Zhao, K.~Yu, L.~Li, Y.~Pan, S.~Guan, and Y.-X. Wang, ``Invisible image
+  watermarks are provably removable using spectral methods,'' in {\em Advances
+  in Neural Information Processing Systems (NeurIPS)}, 2023.
+
+\bibitem{radford2021clip}
+A.~Radford, J.~W. Kim, C.~Hallacy, A.~Ramesh, G.~Goh, S.~Agarwal, G.~Sastry,
+  A.~Askell, P.~Mishkin, J.~Clark, G.~Krueger, and I.~Sutskever, ``Learning
+  transferable visual models from natural language supervision,'' in {\em
+  International Conference on Machine Learning (ICML)}, pp.~8748--8763, 2021.
+
+\bibitem{kirchenbauer2023watermark}
+J.~Kirchenbauer, J.~Geiping, Y.~Wen, J.~Katz, I.~Miers, and T.~Goldstein, ``A
+  watermark for large language models,'' {\em arXiv preprint arXiv:2301.10226},
+  2023.
+
+\bibitem{kingma2013vae}
+D.~P. Kingma and M.~Welling, ``Auto-encoding variational bayes,'' in {\em
+  International Conference on Learning Representations (ICLR)}, 2014.
+
+\bibitem{ho2020ddpm}
+J.~Ho, A.~Jain, and P.~Abbeel, ``Denoising diffusion probabilistic models,'' in
+  {\em Advances in Neural Information Processing Systems (NeurIPS)}, vol.~33,
+  pp.~6840--6851, 2020.
+
+\end{thebibliography}

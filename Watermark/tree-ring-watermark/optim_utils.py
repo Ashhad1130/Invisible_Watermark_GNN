@@ -97,7 +97,29 @@ def measure_similarity(images, prompt, model, clip_preprocess, tokenizer, device
 
 
 def get_dataset(args):
-    if 'laion' in args.dataset:
+    # Support multi-category prompts (local, no download)
+    if 'category' in args.dataset.lower():
+        try:
+            from category_prompts import get_random_prompts
+            seed = getattr(args, 'gen_seed', 42)
+            dataset = get_random_prompts(max(getattr(args, 'end', 50), 50), seed=seed)
+            prompt_key = 'prompt'
+        except ImportError:
+            print("Warning: category_prompts not found. Falling back to Gustavosta.")
+            dataset = load_dataset("Gustavosta/Stable-Diffusion-Prompts")['test']
+            prompt_key = 'Prompt'
+    # Support landscape-only prompts (local, no download)
+    elif 'landscape' in args.dataset.lower():
+        try:
+            from landscape_prompts import get_prompts
+            prompts = get_prompts(0, 1000)
+            dataset = [{'prompt': p} for p in prompts]
+            prompt_key = 'prompt'
+        except ImportError:
+            print("Warning: landscape_prompts not found. Falling back to Gustavosta.")
+            dataset = load_dataset("Gustavosta/Stable-Diffusion-Prompts")['test']
+            prompt_key = 'Prompt'
+    elif 'laion' in args.dataset:
         dataset = load_dataset(args.dataset)['train']
         prompt_key = 'TEXT'
     elif 'coco' in args.dataset:
@@ -123,6 +145,18 @@ def circle_mask(size=64, r=10, x_offset=0, y_offset=0):
     return ((x - x0)**2 + (y-y0)**2)<= r**2
 
 
+def annulus_mask(size=64, r_inner=0, r_outer=10, x_offset=0, y_offset=0):
+    """Boolean mask selecting pixels with r_inner < dist <= r_outer from center.
+    When r_inner=0 this is equivalent to circle_mask(r=r_outer)."""
+    x0 = y0 = size // 2
+    x0 += x_offset
+    y0 += y_offset
+    y, x = np.ogrid[:size, :size]
+    y = y[::-1]
+    dist_sq = (x - x0)**2 + (y - y0)**2
+    return (dist_sq > r_inner**2) & (dist_sq <= r_outer**2)
+
+
 def get_watermarking_mask(init_latents_w, args, device):
     watermarking_mask = torch.zeros(init_latents_w.shape, dtype=torch.bool).to(device)
 
@@ -142,6 +176,26 @@ def get_watermarking_mask(init_latents_w, args, device):
             watermarking_mask[:, :, anchor_p-args.w_radius:anchor_p+args.w_radius, anchor_p-args.w_radius:anchor_p+args.w_radius] = True
         else:
             watermarking_mask[:, args.w_channel, anchor_p-args.w_radius:anchor_p+args.w_radius, anchor_p-args.w_radius:anchor_p+args.w_radius] = True
+    elif args.w_mask_shape == 'multi_ring':
+        # Two rotation-invariant annular bands in Fourier space:
+        #   Inner band: 0 < dist <= w_radius_inner  (near DC; survives heavy cropping)
+        #   Outer band: w_radius_inner+gap < dist <= w_radius  (carries distinct signal)
+        # Both bands are circular → rotation of the image rotates the spectrum but
+        # annuli look identical after rotation, preserving detection.
+        r_out = args.w_radius
+        r_in  = getattr(args, 'w_radius_inner', max(1, r_out // 3))
+        gap   = max(1, r_out // 5)  # gap between bands so they stay distinct
+        size  = init_latents_w.shape[-1]
+
+        inner_band = circle_mask(size, r=r_in)
+        outer_band = annulus_mask(size, r_inner=r_in + gap, r_outer=r_out)
+        np_mask = inner_band | outer_band
+        torch_mask = torch.tensor(np_mask).to(device)
+
+        if args.w_channel == -1:
+            watermarking_mask[:, :] = torch_mask
+        else:
+            watermarking_mask[:, args.w_channel] = torch_mask
     elif args.w_mask_shape == 'no':
         pass
     else:
@@ -201,7 +255,7 @@ def inject_watermark(init_latents_w, watermarking_mask, gt_patch, args):
         init_latents_w[watermarking_mask] = gt_patch[watermarking_mask].clone()
         return init_latents_w
     else:
-        NotImplementedError(f'w_injection: {args.w_injection}')
+        raise NotImplementedError(f'w_injection: {args.w_injection}')
 
     init_latents_w = torch.fft.ifft2(torch.fft.ifftshift(init_latents_w_fft, dim=(-1, -2))).real
 
@@ -218,13 +272,13 @@ def eval_watermark(reversed_latents_no_w, reversed_latents_w, watermarking_mask,
         reversed_latents_w_fft = reversed_latents_w
         target_patch = gt_patch
     else:
-        NotImplementedError(f'w_measurement: {args.w_measurement}')
+        raise NotImplementedError(f'w_measurement: {args.w_measurement}')
 
     if 'l1' in args.w_measurement:
         no_w_metric = torch.abs(reversed_latents_no_w_fft[watermarking_mask] - target_patch[watermarking_mask]).mean().item()
         w_metric = torch.abs(reversed_latents_w_fft[watermarking_mask] - target_patch[watermarking_mask]).mean().item()
     else:
-        NotImplementedError(f'w_measurement: {args.w_measurement}')
+        raise NotImplementedError(f'w_measurement: {args.w_measurement}')
 
     return no_w_metric, w_metric
 

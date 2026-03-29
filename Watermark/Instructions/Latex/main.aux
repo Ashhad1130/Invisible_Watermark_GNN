@@ -1,0 +1,284 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{wen2023treering}
+\citation{rombach2022ldm}
+\citation{saharia2022imagen}
+\citation{saharia2022imagen}
+\citation{fan2025trustworthiness}
+\citation{10081412}
+\citation{jiang2023evading}
+\citation{10081412}
+\citation{song2020ddim}
+\citation{NEURIPS2024}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{4}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{4}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Technical Context}{4}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}The Technical Challenge of Source-Side Watermarking}{4}{subsection.1.2}\protected@file@percent }
+\citation{wen2023treering}
+\citation{song2020ddim}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Tree-Ring: Source-Side Watermarking for Diffusion Models}{5}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Limitations of the Original Work}{5}{subsection.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Our Contributions}{5}{subsection.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Research Questions}{5}{subsection.1.6}\protected@file@percent }
+\citation{wen2023treering}
+\citation{cox1997watermarking}
+\citation{zhu2018hidden}
+\citation{tancik2020stegastamp}
+\citation{yu2021artificial}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7}Paper Organisation}{6}{subsection.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Overview of the Approach}{6}{section.2}\protected@file@percent }
+\newlabel{sec:overview}{{2}{6}{Overview of the Approach}{section.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{6}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{6}{Related Work}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Classical Spread-Spectrum Watermarking}{6}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Deep Learning-Based Post-Hoc Watermarking}{6}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Source-Side Watermarking for Generative Models}{6}{subsection.3.3}\protected@file@percent }
+\citation{fernandez2023stablediffusion}
+\citation{wen2023treering}
+\citation{zhao2025sok}
+\citation{zhao2023invisible}
+\citation{zhao2025sok}
+\citation{radford2021clip}
+\citation{kirchenbauer2023watermark}
+\citation{cox1997watermarking}
+\citation{zhu2018hidden}
+\citation{tancik2020stegastamp}
+\citation{fernandez2023stablediffusion}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Robustness and Attack Taxonomies}{7}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}AI-Generated Content Detection Without Watermarks}{7}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}LLM Watermarking and Cross-Modal Parallels}{7}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Comparative Analysis of Watermarking Paradigms}{7}{subsection.3.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of watermarking approaches. \textbf  {Training-free}: no model retraining required. \textbf  {Source-side}: embedded at generation. \textbf  {Regen-safe}: survives regeneration attacks. \textbf  {JPEG}: survives quality-50 JPEG. \textbf  {Geometry}: survives moderate rotation/crop. \text  {$\mathsurround \z@ \mathchar "458$}$^*$: partial/configuration-dependent.}}{7}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:watermark_comparison}{{1}{7}{Comparison of watermarking approaches. \textbf {Training-free}: no model retraining required. \textbf {Source-side}: embedded at generation. \textbf {Regen-safe}: survives regeneration attacks. \textbf {JPEG}: survives quality-50 JPEG. \textbf {Geometry}: survives moderate rotation/crop. \checkmark $^*$: partial/configuration-dependent}{table.caption.2}{}}
+\citation{rombach2022ldm}
+\citation{kingma2013vae}
+\citation{ho2020ddpm}
+\citation{ho2020ddpm}
+\citation{song2020ddim}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Positioning of Our Work}{8}{subsection.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Background and Preliminaries}{8}{section.4}\protected@file@percent }
+\newlabel{sec:bg}{{4}{8}{Background and Preliminaries}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Latent Diffusion Models}{8}{subsection.4.1}\protected@file@percent }
+\newlabel{eq:forward}{{2}{8}{Latent Diffusion Models}{equation.2}{}}
+\newlabel{eq:marginal}{{3}{8}{Latent Diffusion Models}{equation.3}{}}
+\newlabel{eq:obj}{{4}{8}{Latent Diffusion Models}{equation.4}{}}
+\newlabel{eq:cfg}{{5}{8}{Latent Diffusion Models}{equation.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}DDIM Deterministic Sampling}{8}{subsection.4.2}\protected@file@percent }
+\newlabel{eq:ddim}{{6}{8}{DDIM Deterministic Sampling}{equation.6}{}}
+\newlabel{eq:z0hat}{{7}{8}{DDIM Deterministic Sampling}{equation.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}DDIM Inversion}{8}{subsection.4.3}\protected@file@percent }
+\newlabel{eq:inversion}{{8}{8}{DDIM Inversion}{equation.8}{}}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Tree-Ring Watermarking in Detail}{9}{subsection.4.4}\protected@file@percent }
+\newlabel{eq:mask_baseline}{{9}{9}{Tree-Ring Watermarking in Detail}{equation.9}{}}
+\newlabel{eq:inject}{{10}{9}{Tree-Ring Watermarking in Detail}{equation.10}{}}
+\newlabel{eq:l1}{{11}{9}{Tree-Ring Watermarking in Detail}{equation.11}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why the ring pattern?}{9}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Formal Problem Setup}{9}{subsection.4.5}\protected@file@percent }
+\newlabel{eq:problem_embed}{{14}{9}{Formal Problem Setup}{equation.14}{}}
+\newlabel{eq:problem_detect}{{20}{9}{Formal Problem Setup}{equation.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Tree-Ring Watermarking pipeline~\cite  {wen2023treering}.} \emph  {Embedding (top):} A secret complex key $k$ is injected into the ring-masked Fourier region $M$ of a Gaussian noise sample $z_T$; the modified latent $z_T^w$ seeds DDIM generation to produce watermarked image $x_w$. \emph  {Detection (bottom):} A suspect image $x^*$ (optionally attacked) is reversed via DDIM inversion to recover $\tilde  {z}_T$; the masked L1 distance between $\mathcal  {F}(\tilde  {z}_T)$ and key $k$ yields score $d$, which is thresholded at $\tau $. Our extensions (dual-band mask $M^{\mathrm  {mr}}$, all-channel key $k^{(0:3)}$) modify only the injection step, leaving the rest unchanged.}}{10}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:pipeline}{{1}{10}{\textbf {Tree-Ring Watermarking pipeline~\cite {wen2023treering}.} \emph {Embedding (top):} A secret complex key $k$ is injected into the ring-masked Fourier region $M$ of a Gaussian noise sample $z_T$; the modified latent $z_T^w$ seeds DDIM generation to produce watermarked image $x_w$. \emph {Detection (bottom):} A suspect image $x^*$ (optionally attacked) is reversed via DDIM inversion to recover $\tilde {z}_T$; the masked L1 distance between $\mathcal {F}(\tilde {z}_T)$ and key $k$ yields score $d$, which is thresholded at $\tau $. Our extensions (dual-band mask $M^{\mathrm {mr}}$, all-channel key $k^{(0:3)}$) modify only the injection step, leaving the rest unchanged}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Evaluation Data}{10}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Evaluation Metrics and Threat Model}{10}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.1}Threat Model}{10}{subsubsection.4.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.7.2}Metrics}{10}{subsubsection.4.7.2}\protected@file@percent }
+\newlabel{eq:acc}{{21}{10}{Metrics}{equation.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Theoretical Analysis}{10}{section.5}\protected@file@percent }
+\newlabel{sec:theory}{{5}{10}{Theoretical Analysis}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Formalising the Inversion Error}{10}{subsection.5.1}\protected@file@percent }
+\newlabel{eq:inversion_ode}{{22}{10}{Formalising the Inversion Error}{equation.22}{}}
+\newlabel{eq:euler_error}{{23}{10}{Formalising the Inversion Error}{equation.23}{}}
+\newlabel{eq:dw_bound}{{25}{11}{Formalising the Inversion Error}{equation.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Frequency-Domain Analysis of Crop Attacks}{11}{subsection.5.2}\protected@file@percent }
+\newlabel{eq:crop_spatial}{{27}{11}{Frequency-Domain Analysis of Crop Attacks}{equation.27}{}}
+\newlabel{eq:crop_fourier}{{28}{11}{Frequency-Domain Analysis of Crop Attacks}{equation.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Frequency-Domain Analysis of Blur and JPEG Attacks}{11}{subsection.5.3}\protected@file@percent }
+\newlabel{eq:blur_fourier}{{29}{11}{Frequency-Domain Analysis of Blur and JPEG Attacks}{equation.29}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Theoretical robustness of each frequency band under the three main attack categories. ($\text  {$\mathsurround \z@ \mathchar "458$}$) = robust, (\textsc  {x}) = vulnerable.}}{11}{table.caption.5}\protected@file@percent }
+\newlabel{tab:band_theory}{{2}{11}{Theoretical robustness of each frequency band under the three main attack categories. ($\checkmark $) = robust, (\textsc {x}) = vulnerable}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}SNR Analysis of All-Channel Embedding}{11}{subsection.5.4}\protected@file@percent }
+\newlabel{eq:snr4}{{37}{12}{SNR Analysis of All-Channel Embedding}{equation.37}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Theoretical Analysis of Rotation Attacks}{12}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:theory_rotation}{{5.5}{12}{Theoretical Analysis of Rotation Attacks}{subsection.5.5}{}}
+\newlabel{eq:rotation_score}{{41}{12}{Theoretical Analysis of Rotation Attacks}{equation.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Theoretical Analysis of Additive Noise Attacks}{12}{subsection.5.6}\protected@file@percent }
+\newlabel{sec:theory_noise}{{5.6}{12}{Theoretical Analysis of Additive Noise Attacks}{subsection.5.6}{}}
+\citation{wen2023treering}
+\newlabel{eq:snr_noise}{{47}{13}{Theoretical Analysis of Additive Noise Attacks}{equation.47}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Methodology}{13}{section.6}\protected@file@percent }
+\newlabel{sec:methods}{{6}{13}{Methodology}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Config~B: Baseline Paper-Exact Replication}{13}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:baseline}{{6.1}{13}{Config~B: Baseline Paper-Exact Replication}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Config~O: Step Count Optimisation ($N$: 50~$\to $~100)}{13}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:step}{{6.2}{13}{Config~O: Step Count Optimisation ($N$: 50~$\to $~100)}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Config~MR: Dual-Band Multi-Ring Mask}{13}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:multiband}{{6.3}{13}{Config~MR: Dual-Band Multi-Ring Mask}{subsection.6.3}{}}
+\newlabel{eq:mr}{{48}{13}{Config~MR: Dual-Band Multi-Ring Mask}{equation.48}{}}
+\newlabel{eq:l1mr}{{49}{13}{Config~MR: Dual-Band Multi-Ring Mask}{equation.49}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Config~MR-AC: All-Channel Embedding}{13}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:allchan}{{6.4}{13}{Config~MR-AC: All-Channel Embedding}{subsection.6.4}{}}
+\newlabel{eq:allchan_embed}{{50}{13}{Config~MR-AC: All-Channel Embedding}{equation.50}{}}
+\newlabel{eq:l1ac}{{51}{13}{Config~MR-AC: All-Channel Embedding}{equation.51}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Algorithm Specification}{13}{subsection.6.5}\protected@file@percent }
+\newlabel{sec:algorithms}{{6.5}{13}{Algorithm Specification}{subsection.6.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Effect of DDIM inversion step count.} \textbf  {Left:} Reconstruction error $\|\tilde  {z}_T - z_T\|$ decreases monotonically with $N$ as $\mathcal  {O}(1/N)$ (Eq.~\ref {eq:euler_error}). The baseline ($N{=}50$, red dashed) has substantially higher error than the optimised variant ($N{=}100$, green dashed). \textbf  {Right:} Conceptual effect in Fourier space --- the ring pattern recovered after 100 steps is sharper and better-aligned with the injected key $k$ than after 50 steps, directly lowering the L1 detection score for watermarked images.}}{14}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:ddim}{{2}{14}{\textbf {Effect of DDIM inversion step count.} \textbf {Left:} Reconstruction error $\|\tilde {z}_T - z_T\|$ decreases monotonically with $N$ as $\mathcal {O}(1/N)$ (Eq.~\ref {eq:euler_error}). The baseline ($N{=}50$, red dashed) has substantially higher error than the optimised variant ($N{=}100$, green dashed). \textbf {Right:} Conceptual effect in Fourier space --- the ring pattern recovered after 100 steps is sharper and better-aligned with the injected key $k$ than after 50 steps, directly lowering the L1 detection score for watermarked images}{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Fourier mask designs.} \textbf  {Left:} Baseline circular disc ($\rho \le 10$). \textbf  {Centre:} Dual-band multi-ring mask: inner disc ($\rho \le 4$, red), spectral gap ($4 < \rho < 6$, grey), outer ring ($6 \le \rho \le 10$, blue). \textbf  {Right:} Coverage comparison. The inner disc provides crop-robust coverage; the outer ring provides blur/JPEG-robust coverage. Together they form a complementary pair.}}{14}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:masks}{{3}{14}{\textbf {Fourier mask designs.} \textbf {Left:} Baseline circular disc ($\rho \le 10$). \textbf {Centre:} Dual-band multi-ring mask: inner disc ($\rho \le 4$, red), spectral gap ($4 < \rho < 6$, grey), outer ring ($6 \le \rho \le 10$, blue). \textbf {Right:} Coverage comparison. The inner disc provides crop-robust coverage; the outer ring provides blur/JPEG-robust coverage. Together they form a complementary pair}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Computational Complexity Analysis}{14}{subsection.6.6}\protected@file@percent }
+\newlabel{sec:complexity}{{6.6}{14}{Computational Complexity Analysis}{subsection.6.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Dataset and Generation Protocol}{14}{subsection.6.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \textbf  {Multi-Ring mechanism under three attack types.} \textbf  {Row 1 (Crop):} Spatial truncation via sinc convolution spreads outer-ring energy but partially preserves inner-disc signal, lifting AUC from 0.889 (Baseline) to 0.980 (MR-AllChan). \textbf  {Row 2 (Blur):} Gaussian blur attenuates less than 15\% at $\rho {=}10$; both bands survive, AUC stays at 1.000 for all. \textbf  {Row 3 (Rotation):} The all-channel variant aggregates 4 channels for $2\times $ SNR, improving AUC from 0.928 to 0.986.}}{15}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:mr_mech}{{4}{15}{\textbf {Multi-Ring mechanism under three attack types.} \textbf {Row 1 (Crop):} Spatial truncation via sinc convolution spreads outer-ring energy but partially preserves inner-disc signal, lifting AUC from 0.889 (Baseline) to 0.980 (MR-AllChan). \textbf {Row 2 (Blur):} Gaussian blur attenuates less than 15\% at $\rho {=}10$; both bands survive, AUC stays at 1.000 for all. \textbf {Row 3 (Rotation):} The all-channel variant aggregates 4 channels for $2\times $ SNR, improving AUC from 0.928 to 0.986}{figure.caption.8}{}}
+\citation{wen2023treering}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Per-image runtime complexity ($N$: DDIM steps, $C$: active channels, $H{\times }W{=}64{\times }64$ latent).}}{16}{table.caption.9}\protected@file@percent }
+\newlabel{tab:complexity}{{3}{16}{Per-image runtime complexity ($N$: DDIM steps, $C$: active channels, $H{\times }W{=}64{\times }64$ latent)}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Attack Protocol}{16}{subsection.6.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Attack conditions. $\text  {$\mathsurround \z@ \mathchar "458$}$: in original paper; $\dagger $: added in this work.}}{16}{table.caption.10}\protected@file@percent }
+\newlabel{tab:attacks}{{4}{16}{Attack conditions. $\checkmark $: in original paper; $\dagger $: added in this work}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.9}Configuration Summary}{16}{subsection.6.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Progressive configuration design space. All use SD v1.5, $r_{\mathrm  {out}}{=}10$, latent $h{=}w{=}64$.}}{16}{table.caption.11}\protected@file@percent }
+\newlabel{tab:configs}{{5}{16}{Progressive configuration design space. All use SD v1.5, $r_{\mathrm {out}}{=}10$, latent $h{=}w{=}64$}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.10}Success Criteria}{16}{subsection.6.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Experimental Setup}{16}{section.7}\protected@file@percent }
+\newlabel{sec:setup}{{7}{16}{Experimental Setup}{section.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Hardware and Software Environment}{16}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Checkpointing and Reproducibility}{16}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Per-Category Analysis}{17}{subsection.7.3}\protected@file@percent }
+\newlabel{sec:category}{{7.3}{17}{Per-Category Analysis}{subsection.7.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Mean watermarked L1 score per category (MR-AllChan, no\_attack). Gap~$=$ mean no-watermark score $-$ mean watermark score. Larger gap $=$ easier detection.}}{17}{table.caption.12}\protected@file@percent }
+\newlabel{tab:category}{{6}{17}{Mean watermarked L1 score per category (MR-AllChan, no\_attack). Gap~$=$ mean no-watermark score $-$ mean watermark score. Larger gap $=$ easier detection}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Project Planning and Teamwork}{17}{subsection.7.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Estimated vs.\ actual effort (person-days) by project phase. Overruns are marked with $\uparrow $.}}{17}{table.caption.13}\protected@file@percent }
+\newlabel{tab:planning}{{7}{17}{Estimated vs.\ actual effort (person-days) by project phase. Overruns are marked with $\uparrow $}{table.caption.13}{}}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Experiments and Results}{18}{section.8}\protected@file@percent }
+\newlabel{sec:results}{{8}{18}{Experiments and Results}{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Experimental Design and Rationale}{18}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Visual Imperceptibility}{18}{subsection.8.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Perceptual hash similarity between watermarked and non-watermarked image pairs ($n$ = number of available pairs; higher = more similar). PSNR/SSIM are omitted as they are not applicable to this generation paradigm.}}{18}{table.caption.14}\protected@file@percent }
+\newlabel{tab:phash}{{8}{18}{Perceptual hash similarity between watermarked and non-watermarked image pairs ($n$ = number of available pairs; higher = more similar). PSNR/SSIM are omitted as they are not applicable to this generation paradigm}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Full AUC Results}{18}{subsection.8.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {Cross-configuration visual comparison (img\_0016).} Each row shows one configuration: no-watermark reference (left), clean watermarked image (centre), and watermarked image after the hardest available attack for that configuration (right), with the resulting AUC over 50 images. The no-watermark and watermarked images are visually indistinguishable across all configurations. On the rotation $45^\circ $ attack (rows 2--4), AUC improves from 0.894 (Multi-Ring) to 0.986 (MR-AllChan), illustrating the gain from all-channel embedding on geometric attacks. Note: Baseline and Optimized output images were only saved for jpeg\_50 and rotation\_45 respectively; all other attacks are covered by Multi-Ring and MR-AllChan.}}{19}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:config_comparison}{{5}{19}{\textbf {Cross-configuration visual comparison (img\_0016).} Each row shows one configuration: no-watermark reference (left), clean watermarked image (centre), and watermarked image after the hardest available attack for that configuration (right), with the resulting AUC over 50 images. The no-watermark and watermarked images are visually indistinguishable across all configurations. On the rotation $45^\circ $ attack (rows 2--4), AUC improves from 0.894 (Multi-Ring) to 0.986 (MR-AllChan), illustrating the gain from all-channel embedding on geometric attacks. Note: Baseline and Optimized output images were only saved for jpeg\_50 and rotation\_45 respectively; all other attacks are covered by Multi-Ring and MR-AllChan}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \textbf  {Photometric attacks --- all four configurations on img\_0018.} Rows: Baseline ($N{=}50$, 3\,ch, circle) / Optimized ($N{=}100$, 3\,ch, circle) / Multi-Ring ($N{=}100$, 3\,ch, dual-band) / MR-AllChan ($N{=}100$, 4\,ch, dual-band). Columns: clean watermark then 8 photometric attacks. Numbers below each thumbnail are AUC values from the full 50-image evaluation. All configurations achieve AUC $\geq 0.931$ across all photometric conditions; MR-AllChan is consistently best under additive noise.}}{20}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:gallery_photometric}{{6}{20}{\textbf {Photometric attacks --- all four configurations on img\_0018.} Rows: Baseline ($N{=}50$, 3\,ch, circle) / Optimized ($N{=}100$, 3\,ch, circle) / Multi-Ring ($N{=}100$, 3\,ch, dual-band) / MR-AllChan ($N{=}100$, 4\,ch, dual-band). Columns: clean watermark then 8 photometric attacks. Numbers below each thumbnail are AUC values from the full 50-image evaluation. All configurations achieve AUC $\geq 0.931$ across all photometric conditions; MR-AllChan is consistently best under additive noise}{figure.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Mean L1 detection scores at no\_attack (50 images each). Lower score = more watermark signal. Larger gap = higher AUC.}}{20}{table.caption.17}\protected@file@percent }
+\newlabel{tab:scores}{{9}{20}{Mean L1 detection scores at no\_attack (50 images each). Lower score = more watermark signal. Larger gap = higher AUC}{table.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{RQ1 -- Baseline replication.}{20}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RQ2 -- Step optimisation.}{20}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RQ3 -- Structural innovation.}{20}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}AUC Visualisations}{20}{subsection.8.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textbf  {AUC bar chart} across all 13 attacks. MR-AllChan (green) consistently equals or exceeds others, with the largest gains on crop and rotation. Red dashed line = 0.97 PASS threshold.}}{20}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:auc_bar}{{7}{20}{\textbf {AUC bar chart} across all 13 attacks. MR-AllChan (green) consistently equals or exceeds others, with the largest gains on crop and rotation. Red dashed line = 0.97 PASS threshold}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}ROC Curve Analysis}{20}{subsection.8.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \textbf  {ROC curves from real per-image L1 scores} for the four hardest attacks. Each panel shows all four configurations; the diagonal is random ($\mathrm  {AUC} = 0.5$). MR-AllChan (thick green) rises steeply in the critical low-FPR region (left portion). For crop\_0.5 and rotation\_75, Baseline (red dashed) barely separates from the diagonal at $\mathrm  {FPR} < 0.1$, confirming FAIL at TPR@1\%FPR. The y-intercept at $x{=}0.01$ gives TPR@1\%FPR directly.}}{21}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:roc}{{8}{21}{\textbf {ROC curves from real per-image L1 scores} for the four hardest attacks. Each panel shows all four configurations; the diagonal is random ($\mathrm {AUC} = 0.5$). MR-AllChan (thick green) rises steeply in the critical low-FPR region (left portion). For crop\_0.5 and rotation\_75, Baseline (red dashed) barely separates from the diagonal at $\mathrm {FPR} < 0.1$, confirming FAIL at TPR@1\%FPR. The y-intercept at $x{=}0.01$ gives TPR@1\%FPR directly}{figure.caption.23}{}}
+\citation{wen2023treering}
+\citation{wen2023treering}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces AUC results. \textcolor {passgreen}{\textbf  {P}} = PASS ($\geq 0.97$), \textcolor {warnamber}{W} = WARN ($0.93$--$0.97$), \textcolor {failred}{F} = FAIL ($< 0.93$). Bold = best per row. Paper values from Table~2 of Wen et al.~\cite  {wen2023treering} (SD v2.1, Gustavosta prompts); ``---'' = not in paper.}}{22}{table.caption.18}\protected@file@percent }
+\newlabel{tab:auc}{{10}{22}{AUC results. \pass {P} = PASS ($\geq 0.97$), \warn {W} = WARN ($0.93$--$0.97$), \fail {F} = FAIL ($< 0.93$). Bold = best per row. Paper values from Table~2 of Wen et al.~\cite {wen2023treering} (SD v2.1, Gustavosta prompts); ``---'' = not in paper}{table.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Score Distribution Analysis}{22}{subsection.8.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Score Gap Visualisation}{22}{subsection.8.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.8}TPR@1\%FPR Results}{22}{subsection.8.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces TPR@1\%FPR. \textcolor {passgreen}{\textbf  {P}} $\geq 0.80$, \textcolor {warnamber}{W} $\geq 0.50$, \textcolor {failred}{F} $< 0.50$. All values have Clopper-Pearson 95\% CI of $\approx \!\pm 0.07$ at $n{=}50$; results within 0.07 of a threshold boundary are directional only. Paper values from Table~2 of Wen et al.~\cite  {wen2023treering}.}}{22}{table.caption.26}\protected@file@percent }
+\newlabel{tab:tpr}{{11}{22}{TPR@1\%FPR. \pass {P} $\geq 0.80$, \warn {W} $\geq 0.50$, \fail {F} $< 0.50$. All values have Clopper-Pearson 95\% CI of $\approx \!\pm 0.07$ at $n{=}50$; results within 0.07 of a threshold boundary are directional only. Paper values from Table~2 of Wen et al.~\cite {wen2023treering}}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.9}Head-to-Head Analysis}{22}{subsection.8.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces AUC wins per configuration (over all 13 attacks), mean runtime per condition.}}{22}{table.caption.28}\protected@file@percent }
+\newlabel{tab:summary}{{12}{22}{AUC wins per configuration (over all 13 attacks), mean runtime per condition}{table.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \textbf  {L1 score distribution histograms.} Blue = non-watermarked; orange = watermarked. Clear bimodal separation = high AUC. Under no\_attack, both configurations show clean separation. Under rotation\_75 and crop\_0.5, Baseline distributions heavily overlap; MR-AllChan maintains meaningful separation. Under gaussian\_noise\_0.1, all approaches show overlapping distributions with similar gap sizes, confirming it as the remaining open challenge.}}{23}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:hist}{{9}{23}{\textbf {L1 score distribution histograms.} Blue = non-watermarked; orange = watermarked. Clear bimodal separation = high AUC. Under no\_attack, both configurations show clean separation. Under rotation\_75 and crop\_0.5, Baseline distributions heavily overlap; MR-AllChan maintains meaningful separation. Under gaussian\_noise\_0.1, all approaches show overlapping distributions with similar gap sizes, confirming it as the remaining open challenge}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \textbf  {Mean L1 score gap} (non-watermarked minus watermarked) per attack. Larger gaps correlate with higher AUC. MR-AllChan (rightmost bar) maintains the largest gap on geometric attacks while matching others on photometric attacks.}}{23}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:scores}{{10}{23}{\textbf {Mean L1 score gap} (non-watermarked minus watermarked) per attack. Larger gaps correlate with higher AUC. MR-AllChan (rightmost bar) maintains the largest gap on geometric attacks while matching others on photometric attacks}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \textbf  {TPR@1\%FPR} across all conditions. MR-AllChan (green) leads on all attacks where configurations differ. Even MR-AllChan leaves g\_noise\_0.1, crop\_0.5, rotation\_45, rotation\_75 in WARN, highlighting the fundamental difficulty of geometric distortions and high noise at strict FPR constraints.}}{23}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:tpr}{{11}{23}{\textbf {TPR@1\%FPR} across all conditions. MR-AllChan (green) leads on all attacks where configurations differ. Even MR-AllChan leaves g\_noise\_0.1, crop\_0.5, rotation\_45, rotation\_75 in WARN, highlighting the fundamental difficulty of geometric distortions and high noise at strict FPR constraints}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \textbf  {Geometric attacks --- all four configurations on img\_0018.} Rows: Baseline / Optimized / Multi-Ring / MR-AllChan. Numbers below each image are AUC values (50-image evaluation). Crop and rotation scramble the Fourier ring structure, making these the hardest attacks; MR-AllChan (bottom row) achieves AUC $\geq 0.980$ on all four conditions, a $\Delta $AUC $\approx 0.07$--$0.09$ gain over the single-channel baseline.}}{24}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:gallery_geometric}{{12}{24}{\textbf {Geometric attacks --- all four configurations on img\_0018.} Rows: Baseline / Optimized / Multi-Ring / MR-AllChan. Numbers below each image are AUC values (50-image evaluation). Crop and rotation scramble the Fourier ring structure, making these the hardest attacks; MR-AllChan (bottom row) achieves AUC $\geq 0.980$ on all four conditions, a $\Delta $AUC $\approx 0.07$--$0.09$ gain over the single-channel baseline}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Ablation Study}{25}{section.9}\protected@file@percent }
+\newlabel{sec:ablation}{{9}{25}{Ablation Study}{section.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Step Count Ablation}{25}{subsection.9.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces AUC for $N{=}50$ vs.\ $N{=}100$. Ch=3, circle mask, $n{=}50$. All values from full experimental runs.}}{25}{table.caption.30}\protected@file@percent }
+\newlabel{tab:step_ablation}{{13}{25}{AUC for $N{=}50$ vs.\ $N{=}100$. Ch=3, circle mask, $n{=}50$. All values from full experimental runs}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Mask Design Ablation}{25}{subsection.9.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces AUC: circle mask vs.\ dual-band mask. $N{=}100$, $c{=}3$, $n{=}50$. Values from full experimental runs.}}{25}{table.caption.31}\protected@file@percent }
+\newlabel{tab:mask_ablation}{{14}{25}{AUC: circle mask vs.\ dual-band mask. $N{=}100$, $c{=}3$, $n{=}50$. Values from full experimental runs}{table.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Channel Count Ablation}{25}{subsection.9.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces AUC: single channel ($c{=}3$) vs.\ all four channels. $N{=}100$, dual-band mask, $n{=}50$. Values from full experimental runs.}}{25}{table.caption.32}\protected@file@percent }
+\newlabel{tab:channel_ablation}{{15}{25}{AUC: single channel ($c{=}3$) vs.\ all four channels. $N{=}100$, dual-band mask, $n{=}50$. Values from full experimental runs}{table.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Spectral Gap and Inner Radius: Theoretical Justification}{25}{subsection.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Summary: Ablation Interactions}{26}{subsection.9.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Incremental AUC gain attributable to each design choice on two key attacks. All deltas computed from real experimental runs.}}{26}{table.caption.33}\protected@file@percent }
+\newlabel{tab:ablation_summary}{{16}{26}{Incremental AUC gain attributable to each design choice on two key attacks. All deltas computed from real experimental runs}{table.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Discussion}{26}{section.10}\protected@file@percent }
+\newlabel{sec:discussion}{{10}{26}{Discussion}{section.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Why MR-AllChan Succeeds on Geometric Attacks}{26}{subsection.10.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Why Gaussian Noise Remains Challenging}{26}{subsection.10.2}\protected@file@percent }
+\citation{zhao2023invisible}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Security and Adversarial Robustness}{27}{subsection.10.3}\protected@file@percent }
+\newlabel{sec:security}{{10.3}{27}{Security and Adversarial Robustness}{subsection.10.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Computational Cost Trade-offs}{27}{subsection.10.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5}Semantic Agnosticism}{27}{subsection.10.5}\protected@file@percent }
+\citation{radford2021clip}
+\citation{wen2023treering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.6}Implications for Regulatory Compliance}{28}{subsection.10.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.7}Main Interpretation}{28}{subsection.10.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.8}Limitations}{28}{subsection.10.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Ethical Considerations}{28}{section.11}\protected@file@percent }
+\newlabel{sec:ethics}{{11}{28}{Ethical Considerations}{section.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Dual-Use, Surveillance, and Fairness}{28}{subsection.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Probabilistic Nature of Watermark Evidence}{28}{subsection.11.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Conclusions and Future Work}{28}{section.12}\protected@file@percent }
+\newlabel{sec:conclusion}{{12}{28}{Conclusions and Future Work}{section.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}Summary of Findings}{28}{subsection.12.1}\protected@file@percent }
+\citation{radford2021clip}
+\citation{zhao2023invisible}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2}Key Take-Home Messages}{29}{subsection.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3}Practical Deployment Recommendations}{29}{subsection.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.4}Future Work}{29}{subsection.12.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Noise-adaptive preprocessing (concrete experiment).}{29}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{CLIP quality verification.}{29}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Adaptive adversarial evaluation.}{29}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Transfer to SDXL.}{29}{section*.37}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Multi-key per-user attribution.}{29}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{C2PA integration.}{29}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Error-correcting key structure.}{29}{section*.40}\protected@file@percent }
+\bibstyle{ieeetr}
+\bibdata{biblio}
+\bibcite{wen2023treering}{1}
+\bibcite{rombach2022ldm}{2}
+\bibcite{saharia2022imagen}{3}
+\bibcite{fan2025trustworthiness}{4}
+\bibcite{10081412}{5}
+\bibcite{jiang2023evading}{6}
+\bibcite{song2020ddim}{7}
+\bibcite{NEURIPS2024}{8}
+\bibcite{cox1997watermarking}{9}
+\bibcite{zhu2018hidden}{10}
+\bibcite{tancik2020stegastamp}{11}
+\bibcite{yu2021artificial}{12}
+\bibcite{fernandez2023stablediffusion}{13}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Individual Contributions}{30}{section.13}\protected@file@percent }
+\newlabel{sec:contributions}{{13}{30}{Individual Contributions}{section.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Contribution matrix (part~1 of~2): research and coding tasks. \textbf  {L}~=~Lead, \textbf  {S}~=~Support, \textbf  {R}~=~Review, \textbf  {--}~=~not involved.}}{30}{table.caption.41}\protected@file@percent }
+\newlabel{tab:contributions_a}{{17}{30}{Contribution matrix (part~1 of~2): research and coding tasks. \textbf {L}~=~Lead, \textbf {S}~=~Support, \textbf {R}~=~Review, \textbf {--}~=~not involved}{table.caption.41}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Contribution matrix (part~2 of~2): experiments, writing, and quality.}}{30}{table.caption.42}\protected@file@percent }
+\newlabel{tab:contributions_b}{{18}{30}{Contribution matrix (part~2 of~2): experiments, writing, and quality}{table.caption.42}{}}
+\bibcite{zhao2025sok}{14}
+\bibcite{zhao2023invisible}{15}
+\bibcite{radford2021clip}{16}
+\bibcite{kirchenbauer2023watermark}{17}
+\bibcite{kingma2013vae}{18}
+\bibcite{ho2020ddpm}{19}
+\gdef \@abspage@last{32}

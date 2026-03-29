@@ -1,0 +1,3 @@
+Watermark radius (r=10) — kept the same so it's a fair comparison and safe for real-world use (larger radius can bleed into image content)
+Watermark pattern — still ring, still injected via complex Fourier domain
+xformers — the optimized runner enables it (run_optimized.py:84) for memory efficiency since 100-step runs are heavier, but this is just a runtime optimization, not a methodological change
