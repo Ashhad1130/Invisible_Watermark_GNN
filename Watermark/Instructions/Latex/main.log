@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  26 MAR 2026 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  29 MAR 2026 14:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,8 +679,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip58
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-4.
+(C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
+7.
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -692,24 +695,24 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -729,8 +732,16 @@ ii
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg
@@ -739,36 +750,43 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 64.
+Package hyperref Info: Link coloring ON on input line 87.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-37.
+12.
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 137
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
 .
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 137
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
 .
 
 (C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1{C:/Users/ashha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/as
-hha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+[1
 
 
+{C:/Users/ashha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ashh
+a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.188 \newpage
+               [1
 
-] (main.toc
-[2
+
+] (main.toc [2
 
 ])
 \tf@toc=\write5
@@ -776,464 +794,957 @@ hha/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
  [3] [4
 
-]
-Underfull \hbox (badness 3861) in paragraph at lines 389--401
+] [5]
+Underfull \hbox (badness 1354) in paragraph at lines 502--512
+[]\OT1/ptm/m/n/10 This fol-lows a pro-gres-sive four-configuration space:
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 502--512
+\OT1/ptm/m/it/10 Base-line \OT1/ptm/m/n/10 (paper-accurate Tree-Ring repli-ca-t
+ion), \OT1/ptm/m/it/10 Op-ti-
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 551--563
 \OT1/ptm/m/n/10 Neural network-based wa-ter-mark-ing sub-stan-tially im-
  []
 
 
-Underfull \hbox (badness 1810) in paragraph at lines 389--401
+Underfull \hbox (badness 1810) in paragraph at lines 551--563
 \OT1/ptm/m/n/10 proved ro-bust-ness over clas-si-cal meth-ods by learn-ing
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 389--401
+Underfull \hbox (badness 1152) in paragraph at lines 551--563
 \OT1/ptm/m/n/10 layer that sim-u-lates com-mon at-tacks (JPEG, Gaus-sian
  []
 
-[5]
-Underfull \hbox (badness 2435) in paragraph at lines 465--475
+
+Underfull \hbox (badness 5817) in paragraph at lines 564--574
+[]\OT1/ptm/m/n/10 StegaStamp [[]] ex-tends the neu-ral ap-proach to
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 564--574
+\OT1/ptm/m/n/10 tographs that can be de-coded af-ter print-ing and re-
+ []
+
+[6]
+Underfull \hbox (badness 2435) in paragraph at lines 627--637
 []\OT1/ptm/m/n/10 Zhao et al. [[]] demon-strated that some in-vis-i-ble
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 478--487
+Underfull \hbox (badness 1057) in paragraph at lines 640--649
 \OT1/ptm/m/n/10 with-out a wa-ter-mark by ex-ploit-ing model-specific fre-
  []
 
 
-Underfull \hbox (badness 4995) in paragraph at lines 533--533
+Underfull \hbox (badness 4995) in paragraph at lines 695--695
 []\OT1/ptm/m/n/10 Table 1: |Com-par-i-son of wa-ter-mark-ing ap-proaches.
  []
 
 
-Overfull \hbox (13.32025pt too wide) in paragraph at lines 537--550
+Overfull \hbox (13.32025pt too wide) in paragraph at lines 699--711
  [][] 
  []
 
-[6] [7]
-Overfull \hbox (12.80167pt too wide) in paragraph at lines 836--847
+[7] [8]
+Overfull \hbox (12.80167pt too wide) in paragraph at lines 997--1008
  [][] 
  []
 
-[8] [9]
-Overfull \hbox (34.2202pt too wide) detected at line 1090
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+105.
+(C:\Users\ashha\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 3189) in paragraph at lines 1113--1116
+[]\OT1/ptm/m/n/10 This for-mu-la-tion con-nects the wa-ter-mark in-jec-tion
+ []
+
+[9] [10] [11]
+Overfull \hbox (34.2202pt too wide) detected at line 1385
 [][][]\OT1/cmr/m/n/10 ^^A[] = \OML/cmm/m/it/10 d[] \OMS/cmsy/m/n/10 ^^@ \OML/cm
 m/m/it/10 d[] \OMS/cmsy/m/n/10 ^^Y []k\OML/cmm/m/it/10 k[]\OMS/cmsy/m/n/10 k[] 
 ^^@ k\OML/cmm/m/it/10 k[]\OMS/cmsy/m/n/10 k[][] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n
 /10 k\OML/cmm/m/it/10 k[]\OMS/cmsy/m/n/10 k[] [] \OML/cmm/m/it/10 :
  []
 
-[10]
+[12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
+(hyperref)                removing `math shift' on input line 1585.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
+(hyperref)                removing `math shift' on input line 1585.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\to' on input line 1290.
+(hyperref)                removing `math shift' on input line 1585.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1290.
+(hyperref)                removing `\to' on input line 1585.
 
-<figures/ddim_explanation.png, id=582, 1003.46895pt x 355.20705pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1585.
+
+<figures/ddim_explanation.png, id=656, 1003.46895pt x 355.20705pt>
 File: figures/ddim_explanation.png Graphic file (type png)
 <use figures/ddim_explanation.png>
-Package pdftex.def Info: figures/ddim_explanation.png  used on input line 1319.
+Package pdftex.def Info: figures/ddim_explanation.png  used on input line 1614.
 
 (pdftex.def)             Requested size: 489.38731pt x 173.23454pt.
-[11]
-<figures/fourier_masks.png, id=600, 859.65166pt x 297.0297pt>
+<figures/fourier_masks.png, id=664, 859.65166pt x 297.0297pt>
 File: figures/fourier_masks.png Graphic file (type png)
 <use figures/fourier_masks.png>
-Package pdftex.def Info: figures/fourier_masks.png  used on input line 1371.
+Package pdftex.def Info: figures/fourier_masks.png  used on input line 1666.
 (pdftex.def)             Requested size: 236.15775pt x 81.59503pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/multiring_mechanism.png, id=601, 1043.4985pt x 835.923pt>
+<figures/multiring_mechanism.png, id=665, 1043.4985pt x 835.923pt>
 File: figures/multiring_mechanism.png Graphic file (type png)
 <use figures/multiring_mechanism.png>
-Package pdftex.def Info: figures/multiring_mechanism.png  used on input line 13
-85.
+Package pdftex.def Info: figures/multiring_mechanism.png  used on input line 16
+80.
 (pdftex.def)             Requested size: 489.38731pt x 392.04202pt.
 
-Underfull \hbox (badness 2922) in paragraph at lines 1418--1422
+Underfull \hbox (badness 2922) in paragraph at lines 1713--1717
 \OT1/ptm/m/n/10 The ex-pected $\OT1/cmr/m/n/10 2\OMS/cmsy/m/n/10 ^^B$ \OT1/ptm/
 m/n/10 SNR im-prove-ment un-der rotation-
  []
 
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <9> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 1444.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 1739.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12]
-Underfull \hbox (badness 1490) in paragraph at lines 1546--1558
+[13]
+Underfull \hbox (badness 1490) in paragraph at lines 1841--1853
 \OT1/ptm/m/n/10 We gen-er-ate im-ages us-ing SD v1.5 with $\OML/cmm/m/it/10 ![]
 \OT1/cmr/m/n/10 7\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5$ \OT1/ptm/m/n/10 and
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13 <./figures/ddim_explanation.png> <./figures/fourier_masks.png>]
-Underfull \hbox (badness 1082) in paragraph at lines 1631--1643
+[14 <./figures/ddim_explanation.png> <./figures/fourier_masks.png>] [15 <./figu
+res/multiring_mechanism.png>]
+Underfull \hbox (badness 1082) in paragraph at lines 1952--1972
 \OT1/ptm/m/n/10 ten-tion was en-abled for all 100-step con-fig-u-ra-tions to
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 1631--1643
+Underfull \hbox (badness 2469) in paragraph at lines 1952--1972
 \OT1/ptm/m/n/10 ing per-image pro-cess-ing qual-ity. Wa-ter-mark in-jec-
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./figures/multiring_mechanism.png>]
-Underfull \hbox (badness 1454) in paragraph at lines 1712--1718
+[16]
+Underfull \hbox (badness 1454) in paragraph at lines 2041--2047
 []\OT1/ptm/m/n/10 Score gaps are broadly con-sis-tent across cat-e-gories
  []
 
 
-Underfull \hbox (badness 2351) in paragraph at lines 1754--1763
+Underfull \hbox (badness 2351) in paragraph at lines 2083--2092
 \OT1/ptm/m/n/10 frequency-domain anal-y-sis be-yond the orig-i-nal pa-per.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1791
+Underfull \hbox (badness 10000) in paragraph at lines 2109--2122
 []\OT1/ptm/b/n/10 DFT-centering bug (crit-i-cal). \OT1/ptm/m/n/10 NumPy's
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 1778--1791
-\OT1/pcr/m/n/10 np.fft.fft2 \OT1/ptm/m/n/10 places the DC com-po-nent at ar-
+Underfull \hbox (badness 1308) in paragraph at lines 2109--2122
+\OT1/ptm/m/n/10 all mask ap-pli-ca-tions in \OT1/pcr/m/n/10 fftshift\OT1/ptm/m/
+n/10 /\OT1/pcr/m/n/10 ifftshift
  []
 
-
-Underfull \hbox (badness 7362) in paragraph at lines 1778--1791
-\OT1/ptm/m/n/10 im-ple-men-ta-tion ap-plied the ring mask with-out
- []
-
-
-Underfull \hbox (badness 1484) in paragraph at lines 1778--1791
-\OT1/pcr/m/n/10 fftshift\OT1/ptm/m/n/10 , caus-ing the key to be in-jected into
-
- []
-
-
-Underfull \hbox (badness 2744) in paragraph at lines 1778--1791
-\OT1/ptm/m/n/10 the wrong fre-quency bins. The bug pro-duced
- []
-
-[15]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 2409) in paragraph at lines 1880--1892
+[17]
+Underfull \hbox (badness 2409) in paragraph at lines 2235--2247
 \OT1/ptm/m/n/10 shows a lower score (0.575), re-flect-ing the stronger
  []
 
-<../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0025_
-no_wm.png, id=657, 513.92pt x 513.92pt>
+<../../experiment/outputs/large_baseline_category/no_attack/img_0016_no_wm.png,
+ id=727, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/no_attack/img_0016_no_wm
+.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/no_attack/img_0016_no_wm.
+png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/no_at
+tack/img_0016_no_wm.png  used on input line 2268.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_baseline_category/no_attack/img_0016_wm.png, id
+=728, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/no_attack/img_0016_wm.pn
+g Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/no_attack/img_0016_wm.png
+>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/no_at
+tack/img_0016_wm.png  used on input line 2271.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_baseline_category/jpeg_50/img_0016_wm_attacked.
+png, id=729, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/jpeg_50/img_0016_wm_atta
+cked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/jpeg_50/img_0016_wm_attac
+ked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/jpeg_
+50/img_0016_wm_attacked.png  used on input line 2274.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_optimized_category/rotation_45/img_0016_no_wm.p
+ng, id=730, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_no
+_wm.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_no_
+wm.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/rota
+tion_45/img_0016_no_wm.png  used on input line 2283.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm.png,
+ id=731, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm
+.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm.
+png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/rota
+tion_45/img_0016_wm.png  used on input line 2286.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm_atta
+cked.png, id=732, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm
+_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm_
+attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/rota
+tion_45/img_0016_wm_attacked.png  used on input line 2289.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_no_wm.pn
+g, id=733, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_no_
+wm.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_no_w
+m.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/no_
+attack/img_0016_no_wm.png  used on input line 2298.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_wm.png, 
+id=734, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_wm.
+png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_wm.p
+ng>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/no_
+attack/img_0016_wm.png  used on input line 2301.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_category/rotation_45/img_0016_wm_att
+acked.png, id=735, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/rotation_45/img_0016_w
+m_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/rotation_45/img_0016_wm
+_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/rot
+ation_45/img_0016_wm_attacked.png  used on input line 2304.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0016_
+no_wm.png, id=736, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_
-0025_no_wm.png Graphic file (type png)
+0016_no_wm.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0
-025_no_wm.png>
+016_no_wm.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/no_attack/img_0025_no_wm.png  used on input line 1896.
-(pdftex.def)             Requested size: 113.3547pt x 113.35289pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0025_
-wm.png, id=658, 513.92pt x 513.92pt>
+gory/no_attack/img_0016_no_wm.png  used on input line 2313.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0016_
+wm.png, id=737, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_
-0025_wm.png Graphic file (type png)
+0016_wm.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0
-025_wm.png>
+016_wm.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/no_attack/img_0025_wm.png  used on input line 1900.
-(pdftex.def)             Requested size: 113.3547pt x 113.35289pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_0025_wm
-_attacked.png, id=660, 513.92pt x 513.92pt>
+gory/no_attack/img_0016_wm.png  used on input line 2316.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/img_001
+6_wm_attacked.png, id=738, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/im
+g_0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/img
+_0016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
+gory/rotation_45/img_0016_wm_attacked.png  used on input line 2319.
+(pdftex.def)             Requested size: 73.97148pt x 73.97148pt.
+File: ../../experiment/outputs/large_baseline_category/no_attack/img_0016_wm.pn
+g Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/no_attack/img_0016_wm.png
+>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/no_at
+tack/img_0016_wm.png  used on input line 2360.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+File: ../../experiment/outputs/large_baseline_category/jpeg_50/img_0016_wm_atta
+cked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/jpeg_50/img_0016_wm_attac
+ked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/jpeg_
+50/img_0016_wm_attacked.png  used on input line 2361.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/jpeg_25/img_0016_wm_attacked.
+png, id=740, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/jpeg_25/img_0016_wm_atta
+cked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/jpeg_25/img_0016_wm_attac
+ked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/jpeg_
+25/img_0016_wm_attacked.png  used on input line 2362.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/gaussian_blur_4/img_0016_wm_a
+ttacked.png, id=741, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/gaussian_blur_4/img_0016
+_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/gaussian_blur_4/img_0016_
+wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/gauss
+ian_blur_4/img_0016_wm_attacked.png  used on input line 2363.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/gaussian_blur_8/img_0016_wm_a
+ttacked.png, id=742, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/gaussian_blur_8/img_0016
+_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/gaussian_blur_8/img_0016_
+wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/gauss
+ian_blur_8/img_0016_wm_attacked.png  used on input line 2364.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/brightness_3/img_0016_wm_atta
+cked.png, id=743, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/brightness_3/img_0016_wm
+_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/brightness_3/img_0016_wm_
+attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/brigh
+tness_3/img_0016_wm_attacked.png  used on input line 2365.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/brightness_6/img_0016_wm_atta
+cked.png, id=744, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/brightness_6/img_0016_wm
+_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/brightness_6/img_0016_wm_
+attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/brigh
+tness_6/img_0016_wm_attacked.png  used on input line 2366.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/gaussian_noise_0.05/img_0016_
+wm_attacked.png, id=745, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/gaussian_noise_0.05/img_
+0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/gaussian_noise_0.05/img_0
+016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/gauss
+ian_noise_0.05/img_0016_wm_attacked.png  used on input line 2367.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_baseline_category/gaussian_noise_0.1/img_0016_w
+m_attacked.png, id=746, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/gaussian_noise_0.1/img_0
+016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/gaussian_noise_0.1/img_00
+16_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/gauss
+ian_noise_0.1/img_0016_wm_attacked.png  used on input line 2368.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/no_attack/img_0016_wm.png, i
+d=747, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/no_attack/img_0016_wm.p
+ng Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/no_attack/img_0016_wm.pn
+g>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/no_a
+ttack/img_0016_wm.png  used on input line 2371.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/jpeg_50/img_0016_wm_attacked
+.png, id=748, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/jpeg_50/img_0016_wm_att
+acked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/jpeg_50/img_0016_wm_atta
+cked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/jpeg
+_50/img_0016_wm_attacked.png  used on input line 2372.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/jpeg_25/img_0016_wm_attacked
+.png, id=749, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/jpeg_25/img_0016_wm_att
+acked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/jpeg_25/img_0016_wm_atta
+cked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/jpeg
+_25/img_0016_wm_attacked.png  used on input line 2373.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/gaussian_blur_4/img_0016_wm_
+attacked.png, id=750, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/gaussian_blur_4/img_001
+6_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/gaussian_blur_4/img_0016
+_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/gaus
+sian_blur_4/img_0016_wm_attacked.png  used on input line 2374.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/gaussian_blur_8/img_0016_wm_
+attacked.png, id=751, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/gaussian_blur_8/img_001
+6_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/gaussian_blur_8/img_0016
+_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/gaus
+sian_blur_8/img_0016_wm_attacked.png  used on input line 2375.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/brightness_3/img_0016_wm_att
+acked.png, id=752, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/brightness_3/img_0016_w
+m_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/brightness_3/img_0016_wm
+_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/brig
+htness_3/img_0016_wm_attacked.png  used on input line 2376.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/brightness_6/img_0016_wm_att
+acked.png, id=753, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/brightness_6/img_0016_w
+m_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/brightness_6/img_0016_wm
+_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/brig
+htness_6/img_0016_wm_attacked.png  used on input line 2377.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/gaussian_noise_0.05/img_0016
+_wm_attacked.png, id=754, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/gaussian_noise_0.05/img
+_0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/gaussian_noise_0.05/img_
+0016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/gaus
+sian_noise_0.05/img_0016_wm_attacked.png  used on input line 2378.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_optimized_category/gaussian_noise_0.1/img_0016_
+wm_attacked.png, id=755, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/gaussian_noise_0.1/img_
+0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/gaussian_noise_0.1/img_0
+016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/gaus
+sian_noise_0.1/img_0016_wm_attacked.png  used on input line 2379.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+File: ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_wm.
+png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/no_attack/img_0016_wm.p
+ng>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/no_
+attack/img_0016_wm.png  used on input line 2382.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/jpeg_50/img_0016_wm_attacke
+d.png, id=756, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/jpeg_50/img_0016_wm_at
+tacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/jpeg_50/img_0016_wm_att
+acked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/jpe
+g_50/img_0016_wm_attacked.png  used on input line 2383.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/jpeg_25/img_0016_wm_attacke
+d.png, id=757, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/jpeg_25/img_0016_wm_at
+tacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/jpeg_25/img_0016_wm_att
+acked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/jpe
+g_25/img_0016_wm_attacked.png  used on input line 2384.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/gaussian_blur_4/img_0016_wm
+_attacked.png, id=758, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/gaussian_blur_4/img_00
+16_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/gaussian_blur_4/img_001
+6_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/gau
+ssian_blur_4/img_0016_wm_attacked.png  used on input line 2385.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/gaussian_blur_8/img_0016_wm
+_attacked.png, id=759, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/gaussian_blur_8/img_00
+16_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/gaussian_blur_8/img_001
+6_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/gau
+ssian_blur_8/img_0016_wm_attacked.png  used on input line 2386.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/brightness_3/img_0016_wm_at
+tacked.png, id=760, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/brightness_3/img_0016_
+wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/brightness_3/img_0016_w
+m_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/bri
+ghtness_3/img_0016_wm_attacked.png  used on input line 2387.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/brightness_6/img_0016_wm_at
+tacked.png, id=761, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/brightness_6/img_0016_
+wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/brightness_6/img_0016_w
+m_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/bri
+ghtness_6/img_0016_wm_attacked.png  used on input line 2388.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.05/img_001
+6_wm_attacked.png, id=762, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.05/im
+g_0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.05/img
+_0016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/gau
+ssian_noise_0.05/img_0016_wm_attacked.png  used on input line 2389.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.1/img_0016
+_wm_attacked.png, id=763, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.1/img
+_0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/gaussian_noise_0.1/img_
+0016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/gau
+ssian_noise_0.1/img_0016_wm_attacked.png  used on input line 2390.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+File: ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_
+0016_wm.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0
+016_wm.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
+gory/no_attack/img_0016_wm.png  used on input line 2393.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_0016_wm
+_attacked.png, id=764, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_00
-25_wm_attacked.png Graphic file (type png)
-<use ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_002
-5_wm_attacked.png>
+16_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_001
+6_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/jpeg_50/img_0025_wm_attacked.png  used on input line 1919.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/jpeg_25/img_0025_wm
-_attacked.png, id=661, 513.92pt x 513.92pt>
+gory/jpeg_50/img_0016_wm_attacked.png  used on input line 2394.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/jpeg_25/img_0016_wm
+_attacked.png, id=765, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_25/img_00
-25_wm_attacked.png Graphic file (type png)
-<use ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_25/img_002
-5_wm_attacked.png>
+16_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_allchan_category/jpeg_25/img_001
+6_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/jpeg_25/img_0025_wm_attacked.png  used on input line 1923.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
+gory/jpeg_25/img_0016_wm_attacked.png  used on input line 2395.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
 <../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_4/img
-_0025_wm_attacked.png, id=662, 513.92pt x 513.92pt>
+_0016_wm_attacked.png, id=766, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_
-4/img_0025_wm_attacked.png Graphic file (type png)
+4/img_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_4
-/img_0025_wm_attacked.png>
+/img_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/gaussian_blur_4/img_0025_wm_attacked.png  used on input line 1927.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
+gory/gaussian_blur_4/img_0016_wm_attacked.png  used on input line 2396.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
 <../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_8/img
-_0025_wm_attacked.png, id=663, 513.92pt x 513.92pt>
+_0016_wm_attacked.png, id=767, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_
-8/img_0025_wm_attacked.png Graphic file (type png)
+8/img_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blur_8
-/img_0025_wm_attacked.png>
+/img_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/gaussian_blur_8/img_0025_wm_attacked.png  used on input line 1931.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
+gory/gaussian_blur_8/img_0016_wm_attacked.png  used on input line 2397.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
 <../../experiment/outputs/large_multi_ring_allchan_category/brightness_3/img_00
-25_wm_attacked.png, id=664, 513.92pt x 513.92pt>
+16_wm_attacked.png, id=768, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/brightness_3/i
-mg_0025_wm_attacked.png Graphic file (type png)
+mg_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/brightness_3/im
-g_0025_wm_attacked.png>
+g_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/brightness_3/img_0025_wm_attacked.png  used on input line 1938.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
+gory/brightness_3/img_0016_wm_attacked.png  used on input line 2398.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
 <../../experiment/outputs/large_multi_ring_allchan_category/brightness_6/img_00
-25_wm_attacked.png, id=665, 513.92pt x 513.92pt>
+16_wm_attacked.png, id=769, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/brightness_6/i
-mg_0025_wm_attacked.png Graphic file (type png)
+mg_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/brightness_6/im
-g_0025_wm_attacked.png>
+g_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/brightness_6/img_0025_wm_attacked.png  used on input line 1942.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
+gory/brightness_6/img_0016_wm_attacked.png  used on input line 2399.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise_0.05
+/img_0016_wm_attacked.png, id=770, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise
+_0.05/img_0016_wm_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise_
+0.05/img_0016_wm_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
+gory/gaussian_noise_0.05/img_0016_wm_attacked.png  used on input line 2400.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
 <../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise_0.1/
-img_0025_wm_attacked.png, id=666, 513.92pt x 513.92pt>
+img_0016_wm_attacked.png, id=771, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise
-_0.1/img_0025_wm_attacked.png Graphic file (type png)
+_0.1/img_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise_
-0.1/img_0025_wm_attacked.png>
+0.1/img_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/gaussian_noise_0.1/img_0025_wm_attacked.png  used on input line 1946.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-File: ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise
-_0.1/img_0025_wm_attacked.png Graphic file (type png)
-<use ../../experiment/outputs/large_multi_ring_allchan_category/gaussian_noise_
-0.1/img_0025_wm_attacked.png>
-Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/gaussian_noise_0.1/img_0025_wm_attacked.png  used on input line 1950.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16 <../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_0
-025_no_wm.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_ca
-tegory/no_attack/img_0025_wm.png (PNG copy)>]
-Underfull \hbox (badness 1748) in paragraph at lines 2067--2074
+gory/gaussian_noise_0.1/img_0016_wm_attacked.png  used on input line 2401.
+(pdftex.def)             Requested size: 48.44885pt x 48.44649pt.
+[18] [19 <../../experiment/outputs/large_baseline_category/no_attack/img_0016_n
+o_wm.png (PNG copy)> <../../experiment/outputs/large_baseline_category/no_attac
+k/img_0016_wm.png (PNG copy)> <../../experiment/outputs/large_baseline_category
+/jpeg_50/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_o
+ptimized_category/rotation_45/img_0016_no_wm.png (PNG copy)> <../../experiment/
+outputs/large_optimized_category/rotation_45/img_0016_wm.png (PNG copy)> <../..
+/experiment/outputs/large_optimized_category/rotation_45/img_0016_wm_attacked.p
+ng (PNG copy)> <../../experiment/outputs/large_multi_ring_category/no_attack/im
+g_0016_no_wm.png (PNG copy)> <../../experiment/outputs/large_multi_ring_categor
+y/no_attack/img_0016_wm.png (PNG copy)> <../../experiment/outputs/large_multi_r
+ing_category/rotation_45/img_0016_wm_attacked.png (PNG copy)> <../../experiment
+/outputs/large_multi_ring_allchan_category/no_attack/img_0016_no_wm.png (PNG co
+py)> <../../experiment/outputs/large_multi_ring_allchan_category/no_attack/img_
+0016_wm.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_cate
+gory/rotation_45/img_0016_wm_attacked.png (PNG copy)>]
+Underfull \hbox (badness 1748) in paragraph at lines 2519--2526
 \OT1/ptm/m/n/10 PASS on 12/13, elim-i-nates all FAIL con-di-tions, and
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 2067--2074
-\OT1/ptm/m/n/10 sur-passes the pa-per on crop[]0.75 (0.996 vs. 0.97).
+Underfull \hbox (badness 1776) in paragraph at lines 2519--2526
+\OT1/ptm/m/n/10 ($\OT1/cmr/m/n/10 +0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 066$\OT1/
+ptm/m/n/10 ), ro-ta-tion[]75 ($\OT1/cmr/m/n/10 +0\OML/cmm/m/it/10 :\OT1/cmr/m/n
+/10 057$\OT1/ptm/m/n/10 ). The one re-main-ing
  []
 
-<../../experiment/results/large_category_plots/auc.png, id=680, 1409.265pt x 43
+<../../experiment/results/large_category_plots/auc.png, id=789, 1409.265pt x 43
 3.62pt>
 File: ../../experiment/results/large_category_plots/auc.png Graphic file (type 
 png)
 <use ../../experiment/results/large_category_plots/auc.png>
 Package pdftex.def Info: ../../experiment/results/large_category_plots/auc.png 
- used on input line 2079.
+ used on input line 2531.
 (pdftex.def)             Requested size: 236.15775pt x 72.6624pt.
-<../../experiment/results/large_category_plots/heatmap_auc.png, id=681, 578.16p
-t x 563.706pt>
-File: ../../experiment/results/large_category_plots/heatmap_auc.png Graphic fil
-e (type png)
-<use ../../experiment/results/large_category_plots/heatmap_auc.png>
-Package pdftex.def Info: ../../experiment/results/large_category_plots/heatmap_
-auc.png  used on input line 2089.
-(pdftex.def)             Requested size: 236.15775pt x 230.2522pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/roc_curves.png, id=683, 860.013pt x 733.5405pt>
+<figures/roc_curves.png, id=791, 860.013pt x 733.5405pt>
 File: figures/roc_curves.png Graphic file (type png)
 <use figures/roc_curves.png>
-Package pdftex.def Info: figures/roc_curves.png  used on input line 2103.
+Package pdftex.def Info: figures/roc_curves.png  used on input line 2546.
 (pdftex.def)             Requested size: 489.38731pt x 417.41727pt.
 
-Underfull \hbox (badness 2401) in paragraph at lines 2120--2128
+Underfull \hbox (badness 2401) in paragraph at lines 2563--2571
 []\OT1/ptm/b/n/10 Low-FPR be-haviour is un-der-es-ti-mated by AUC.
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 2120--2128
+Underfull \hbox (badness 2269) in paragraph at lines 2563--2571
 \OT1/ptm/m/n/10 AllChan is 0.980 (PASS) --- a gap of 0.091 AUC.
  []
 
-[17 <../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_002
-5_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allcha
-n_category/jpeg_25/img_0025_wm_attacked.png (PNG copy)> <../../experiment/outpu
-ts/large_multi_ring_allchan_category/gaussian_blur_4/img_0025_wm_attacked.png (
-PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_category/gaussian
-_blur_8/img_0025_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_mu
-lti_ring_allchan_category/brightness_3/img_0025_wm_attacked.png (PNG copy)> <..
-/../experiment/outputs/large_multi_ring_allchan_category/brightness_6/img_0025_
-wm_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_
-category/gaussian_noise_0.1/img_0025_wm_attacked.png (PNG copy)> <../../experim
-ent/results/large_category_plots/auc.png>]
-<figures/score_histograms.png, id=694, 1148.73164pt x 569.84895pt>
+[20 <../../experiment/outputs/large_baseline_category/jpeg_25/img_0016_wm_attac
+ked.png (PNG copy)> <../../experiment/outputs/large_baseline_category/gaussian_
+blur_4/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_bas
+eline_category/gaussian_blur_8/img_0016_wm_attacked.png (PNG copy)> <../../expe
+riment/outputs/large_baseline_category/brightness_3/img_0016_wm_attacked.png (P
+NG copy)> <../../experiment/outputs/large_baseline_category/brightness_6/img_00
+16_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_baseline_categor
+y/gaussian_noise_0.05/img_0016_wm_attacked.png (PNG copy)> <../../experiment/ou
+tputs/large_baseline_category/gaussian_noise_0.1/img_0016_wm_attacked.png (PNG 
+copy)> <../../experiment/outputs/large_optimized_category/no_attack/img_0016_wm
+.png (PNG copy)> <../../experiment/outputs/large_optimized_category/jpeg_50/img
+_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_optimized_cat
+egory/jpeg_25/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/la
+rge_optimized_category/gaussian_blur_4/img_0016_wm_attacked.png (PNG copy)> <..
+/../experiment/outputs/large_optimized_category/gaussian_blur_8/img_0016_wm_att
+acked.png (PNG copy)> <../../experiment/outputs/large_optimized_category/bright
+ness_3/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_opt
+imized_category/brightness_6/img_0016_wm_attacked.png (PNG copy)> <../../experi
+ment/outputs/large_optimized_category/gaussian_noise_0.05/img_0016_wm_attacked.
+png (PNG copy)> <../../experiment/outputs/large_optimized_category/gaussian_noi
+se_0.1/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_mul
+ti_ring_category/jpeg_50/img_0016_wm_attacked.png (PNG copy)> <../../experiment
+/outputs/large_multi_ring_category/jpeg_25/img_0016_wm_attacked.png (PNG copy)>
+ <../../experiment/outputs/large_multi_ring_category/gaussian_blur_4/img_0016_w
+m_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_category/
+gaussian_blur_8/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/
+large_multi_ring_category/brightness_3/img_0016_wm_attacked.png (PNG copy)> <..
+/../experiment/outputs/large_multi_ring_category/brightness_6/img_0016_wm_attac
+ked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_category/gaussia
+n_noise_0.05/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/lar
+ge_multi_ring_category/gaussian_noise_0.1/img_0016_wm_attacked.png (PNG copy)> 
+<../../experiment/outputs/large_multi_ring_allchan_category/jpeg_50/img_0016_wm
+_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_ca
+tegory/jpeg_25/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/l
+arge_multi_ring_allchan_category/gaussian_blur_4/img_0016_wm_attacked.png (PNG 
+copy)> <../../experiment/outputs/large_multi_ring_allchan_category/gaussian_blu
+r_8/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_
+ring_allchan_category/brightness_3/img_0016_wm_attacked.png (PNG copy)> <../../
+experiment/outputs/large_multi_ring_allchan_category/brightness_6/img_0016_wm_a
+ttacked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_cate
+gory/gaussian_noise_0.05/img_0016_wm_attacked.png (PNG copy)> <../../experiment
+/outputs/large_multi_ring_allchan_category/gaussian_noise_0.1/img_0016_wm_attac
+ked.png (PNG copy)> <../../experiment/results/large_category_plots/auc.png>]
+[21 <./figures/roc_curves.png>]
+<figures/score_histograms.png, id=807, 1148.73164pt x 569.84895pt>
 File: figures/score_histograms.png Graphic file (type png)
 <use figures/score_histograms.png>
-Package pdftex.def Info: figures/score_histograms.png  used on input line 2142.
+Package pdftex.def Info: figures/score_histograms.png  used on input line 2585.
 
 (pdftex.def)             Requested size: 489.38731pt x 242.76953pt.
-<figures/score_distributions.png, id=695, 859.2903pt x 357.37515pt>
+<figures/score_distributions.png, id=808, 859.2903pt x 357.37515pt>
 File: figures/score_distributions.png Graphic file (type png)
 <use figures/score_distributions.png>
-Package pdftex.def Info: figures/score_distributions.png  used on input line 21
-75.
+Package pdftex.def Info: figures/score_distributions.png  used on input line 26
+18.
 (pdftex.def)             Requested size: 236.15775pt x 98.21576pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../../experiment/results/large_category_plots/tpr_at_1fpr.png, id=699, 1409.26
+<../../experiment/results/large_category_plots/tpr_at_1fpr.png, id=812, 1409.26
 5pt x 433.62pt>
 File: ../../experiment/results/large_category_plots/tpr_at_1fpr.png Graphic fil
 e (type png)
 <use ../../experiment/results/large_category_plots/tpr_at_1fpr.png>
 Package pdftex.def Info: ../../experiment/results/large_category_plots/tpr_at_1
-fpr.png  used on input line 2226.
+fpr.png  used on input line 2669.
 (pdftex.def)             Requested size: 236.15775pt x 72.6624pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18 <../../experiment/results/large_category_plots/heatmap_auc.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../../experiment/outputs/large_multi_ring_allchan_category/crop_0.75/img_0025_
-wm_attacked.png, id=707, 513.92pt x 513.92pt>
+ [22]
+<../../experiment/outputs/large_baseline_category/crop_0.75/img_0016_wm_attacke
+d.png, id=819, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/crop_0.75/img_0016_wm_at
+tacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/crop_0.75/img_0016_wm_att
+acked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/crop_
+0.75/img_0016_wm_attacked.png  used on input line 2748.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_baseline_category/crop_0.5/img_0016_wm_attacked
+.png, id=820, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/crop_0.5/img_0016_wm_att
+acked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/crop_0.5/img_0016_wm_atta
+cked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/crop_
+0.5/img_0016_wm_attacked.png  used on input line 2749.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_baseline_category/rotation_45/img_0016_wm_attac
+ked.png, id=821, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/rotation_45/img_0016_wm_
+attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/rotation_45/img_0016_wm_a
+ttacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/rotat
+ion_45/img_0016_wm_attacked.png  used on input line 2750.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_baseline_category/rotation_75/img_0016_wm_attac
+ked.png, id=822, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_baseline_category/rotation_75/img_0016_wm_
+attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_baseline_category/rotation_75/img_0016_wm_a
+ttacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_baseline_category/rotat
+ion_75/img_0016_wm_attacked.png  used on input line 2751.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_optimized_category/crop_0.75/img_0016_wm_attack
+ed.png, id=823, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/crop_0.75/img_0016_wm_a
+ttacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/crop_0.75/img_0016_wm_at
+tacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/crop
+_0.75/img_0016_wm_attacked.png  used on input line 2754.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_optimized_category/crop_0.5/img_0016_wm_attacke
+d.png, id=824, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/crop_0.5/img_0016_wm_at
+tacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/crop_0.5/img_0016_wm_att
+acked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/crop
+_0.5/img_0016_wm_attacked.png  used on input line 2755.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+File: ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm
+_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/rotation_45/img_0016_wm_
+attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/rota
+tion_45/img_0016_wm_attacked.png  used on input line 2756.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_optimized_category/rotation_75/img_0016_wm_atta
+cked.png, id=825, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_optimized_category/rotation_75/img_0016_wm
+_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_optimized_category/rotation_75/img_0016_wm_
+attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_optimized_category/rota
+tion_75/img_0016_wm_attacked.png  used on input line 2757.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_category/crop_0.75/img_0016_wm_attac
+ked.png, id=826, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/crop_0.75/img_0016_wm_
+attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/crop_0.75/img_0016_wm_a
+ttacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/cro
+p_0.75/img_0016_wm_attacked.png  used on input line 2760.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_category/crop_0.5/img_0016_wm_attack
+ed.png, id=827, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/crop_0.5/img_0016_wm_a
+ttacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/crop_0.5/img_0016_wm_at
+tacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/cro
+p_0.5/img_0016_wm_attacked.png  used on input line 2761.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+File: ../../experiment/outputs/large_multi_ring_category/rotation_45/img_0016_w
+m_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/rotation_45/img_0016_wm
+_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/rot
+ation_45/img_0016_wm_attacked.png  used on input line 2762.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_category/rotation_75/img_0016_wm_att
+acked.png, id=828, 513.92pt x 513.92pt>
+File: ../../experiment/outputs/large_multi_ring_category/rotation_75/img_0016_w
+m_attacked.png Graphic file (type png)
+<use ../../experiment/outputs/large_multi_ring_category/rotation_75/img_0016_wm
+_attacked.png>
+Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_category/rot
+ation_75/img_0016_wm_attacked.png  used on input line 2763.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/crop_0.75/img_0016_
+wm_attacked.png, id=829, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/crop_0.75/img_
-0025_wm_attacked.png Graphic file (type png)
+0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/crop_0.75/img_0
-025_wm_attacked.png>
+016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/crop_0.75/img_0025_wm_attacked.png  used on input line 2297.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/crop_0.5/img_0025_w
-m_attacked.png, id=708, 513.92pt x 513.92pt>
+gory/crop_0.75/img_0016_wm_attacked.png  used on input line 2766.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/crop_0.5/img_0016_w
+m_attacked.png, id=830, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/crop_0.5/img_0
-025_wm_attacked.png Graphic file (type png)
+016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/crop_0.5/img_00
-25_wm_attacked.png>
+16_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/crop_0.5/img_0025_wm_attacked.png  used on input line 2301.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/img_002
-5_wm_attacked.png, id=709, 513.92pt x 513.92pt>
+gory/crop_0.5/img_0016_wm_attacked.png  used on input line 2767.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
 File: ../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/im
-g_0025_wm_attacked.png Graphic file (type png)
+g_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/rotation_45/img
-_0025_wm_attacked.png>
+_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/rotation_45/img_0025_wm_attacked.png  used on input line 2305.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-<../../experiment/outputs/large_multi_ring_allchan_category/rotation_75/img_002
-5_wm_attacked.png, id=710, 513.92pt x 513.92pt>
+gory/rotation_45/img_0016_wm_attacked.png  used on input line 2768.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+<../../experiment/outputs/large_multi_ring_allchan_category/rotation_75/img_001
+6_wm_attacked.png, id=831, 513.92pt x 513.92pt>
 File: ../../experiment/outputs/large_multi_ring_allchan_category/rotation_75/im
-g_0025_wm_attacked.png Graphic file (type png)
+g_0016_wm_attacked.png Graphic file (type png)
 <use ../../experiment/outputs/large_multi_ring_allchan_category/rotation_75/img
-_0025_wm_attacked.png>
+_0016_wm_attacked.png>
 Package pdftex.def Info: ../../experiment/outputs/large_multi_ring_allchan_cate
-gory/rotation_75/img_0025_wm_attacked.png  used on input line 2309.
-(pdftex.def)             Requested size: 117.45564pt x 117.45413pt.
-[19 <./figures/roc_curves.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[20 <./figures/score_histograms.png> <./figures/score_distributions.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 3118) in paragraph at lines 2481--2494
-\OT1/ptm/m/n/10 sian blur at-ten-u-a-tion for-mula (Eq. [][]20[][]), with laten
+gory/rotation_75/img_0016_wm_attacked.png  used on input line 2769.
+(pdftex.def)             Requested size: 113.53522pt x 113.53325pt.
+ [23 <./figures/score_histograms.png> <./figures/score_distributions.png> <../.
+./experiment/results/large_category_plots/tpr_at_1fpr.png>] [24 <../../experime
+nt/outputs/large_baseline_category/crop_0.75/img_0016_wm_attacked.png (PNG copy
+)> <../../experiment/outputs/large_baseline_category/crop_0.5/img_0016_wm_attac
+ked.png (PNG copy)> <../../experiment/outputs/large_baseline_category/rotation_
+45/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_baselin
+e_category/rotation_75/img_0016_wm_attacked.png (PNG copy)> <../../experiment/o
+utputs/large_optimized_category/crop_0.75/img_0016_wm_attacked.png (PNG copy)> 
+<../../experiment/outputs/large_optimized_category/crop_0.5/img_0016_wm_attacke
+d.png (PNG copy)> <../../experiment/outputs/large_optimized_category/rotation_7
+5/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/large_multi_ri
+ng_category/crop_0.75/img_0016_wm_attacked.png (PNG copy)> <../../experiment/ou
+tputs/large_multi_ring_category/crop_0.5/img_0016_wm_attacked.png (PNG copy)> <
+../../experiment/outputs/large_multi_ring_category/rotation_75/img_0016_wm_atta
+cked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_categor
+y/crop_0.75/img_0016_wm_attacked.png (PNG copy)> <../../experiment/outputs/larg
+e_multi_ring_allchan_category/crop_0.5/img_0016_wm_attacked.png (PNG copy)> <..
+/../experiment/outputs/large_multi_ring_allchan_category/rotation_75/img_0016_w
+m_attacked.png (PNG copy)>] [25]
+Underfull \hbox (badness 3118) in paragraph at lines 2942--2955
+\OT1/ptm/m/n/10 sian blur at-ten-u-a-tion for-mula (Eq. [][]29[][]), with laten
 t-
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 2481--2494
+Underfull \hbox (badness 2884) in paragraph at lines 2942--2955
 \OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\O
 T1/cmr/m/n/10 998$\OT1/ptm/m/n/10 , and for $\OML/cmm/m/it/10 ^^[[][]\OT1/cmr/m
 /n/10 8$ \OT1/ptm/m/n/10 ($\OML/cmm/m/it/10 ^^[[][]\OT1/cmr/m/n/10 1$\OT1/ptm/m
 /n/10 ):
  []
 
-[21 <../../experiment/results/large_category_plots/tpr_at_1fpr.png>] [22 <../..
-/experiment/outputs/large_multi_ring_allchan_category/crop_0.75/img_0025_wm_att
-acked.png (PNG copy)> <../../experiment/outputs/large_multi_ring_allchan_catego
-ry/crop_0.5/img_0025_wm_attacked.png (PNG copy)> <../../experiment/outputs/larg
-e_multi_ring_allchan_category/rotation_45/img_0025_wm_attacked.png (PNG copy)> 
-<../../experiment/outputs/large_multi_ring_allchan_category/rotation_75/img_002
-5_wm_attacked.png (PNG copy)>] [23] [24]
-Underfull \hbox (badness 2435) in paragraph at lines 2897--2909
+[26] [27]
+Underfull \hbox (badness 2293) in paragraph at lines 3308--3313
+[]\OT1/ptm/m/n/10 In ad-di-tion, re-spon-si-ble de-ploy-ment re-quires trans-
+ []
+
+[28]
+Underfull \hbox (badness 2435) in paragraph at lines 3411--3423
  []\OT1/ptm/b/n/10 Noise-adaptive pre-pro-cess-ing (con-crete ex-per-i-ment).[]
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2917--2920
+Underfull \hbox (badness 10000) in paragraph at lines 3431--3434
  []\OT1/ptm/b/n/10 Adaptive ad-ver-sar-ial eval-u-a-tion.[] \OT1/ptm/m/n/10 Eva
 l-u-at-ing MR-
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 2937--2940
+Underfull \hbox (badness 1168) in paragraph at lines 3451--3454
  []\OT1/ptm/b/n/10 Error-correcting key struc-ture.[] \OT1/ptm/m/n/10 Em-bed-di
 ng a Reed-
  []
 
-(main.bbl [25]
-Underfull \hbox (badness 1237) in paragraph at lines 34--37
+
+Underfull \hbox (badness 1147) in paragraph at lines 3455--3464
+[]\OT1/ptm/m/n/10 These find-ings sug-gest that source-side Fourier wa-
+ []
+
+
+Underfull \hbox (badness 1810) in paragraph at lines 3455--3464
+\OT1/ptm/m/n/10 ter-mark-ing is a promis-ing di-rec-tion for prac-ti-cal AI-
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 3490--3490
+[]|\OT1/ptm/m/n/8 Freq.-domain back-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3520--3520
+[]|\OT1/ptm/m/n/8 Large-scale runs (50
+ []
+
+(main.bbl
+Underfull \hbox (badness 2435) in paragraph at lines 27--30
+[]\OT1/ptm/m/n/10 F.-A. Croitoru, V. Hon-dru, R. T. Ionescu, and
+ []
+
+
+Underfull \hbox (badness 1237) in paragraph at lines 58--61
 []\OT1/ptm/m/n/10 M. Tan-cik, B. Milden-hall, and R. Ng, ``Ste-gaS-
  []
 
-) [26] (main.aux)
+[30]) [31
+
+] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1AB1E29BD2EF6684C75A38F7EE2E007B;16138.
+(rerunfilecheck)             Checksum: 2D85BF918BAA4053434213EBEF6A1437;17197.
  ) 
 Here is how much of TeX's memory you used:
- 23632 strings out of 467871
- 454003 string characters out of 5418376
- 857377 words of memory out of 5000000
- 51882 multiletter control sequences out of 15000+600000
- 661073 words of font info for 111 fonts, out of 8000000 for 9000
+ 24116 strings out of 467871
+ 485286 string characters out of 5418376
+ 866429 words of memory out of 5000000
+ 52311 multiletter control sequences out of 15000+600000
+ 677619 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,94p,842b,907s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,94p,883b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx9.pfb><C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1262,9 +1773,9 @@ rw/courier/ucrro8a.pfb><C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmb8a.pfb><C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmr8a.pfb><C:/Users/ashha/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on main.pdf (26 pages, 6521709 bytes).
+Output written on main.pdf (32 pages, 16692544 bytes).
 PDF statistics:
- 950 PDF objects out of 1000 (max. 8388607)
- 231 named destinations out of 1000 (max. 500000)
- 747 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1082 PDF objects out of 1200 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 1018 words of extra memory for PDF output out of 10000 (max. 10000000)
 
