@@ -2,6 +2,10 @@
 
 Replication and extension of [Tree-Ring Watermarks](https://arxiv.org/abs/2305.20030) (Wen et al., NeurIPS 2023). We reproduce the original results on Stable Diffusion v1.5, then push the robustness further with three progressive modifications — more DDIM inversion steps, a dual-band Fourier mask, and all-channel embedding.
 
+> **Built on top of the original Tree-Ring Watermark implementation by Yuxin Wen et al.**
+> Original repository: [https://github.com/YuxinWenRick/tree-ring-watermark](https://github.com/YuxinWenRick/tree-ring-watermark)
+> We use their core DDIM inversion and watermark embedding/detection code as the foundation and extend it with our own modifications.
+
 The full write-up is in `Watermark/Instructions/Latex/main.tex` (compiled PDF also included).
 
 ---
@@ -112,10 +116,10 @@ Invisible_Watermark_GNN/
 │   │   │
 │   │   └── checkpoints/             # Per-attack score data (JSON) — used for ROC curves
 │   │
-│   ├── tree-ring-watermark/         # Original Tree-Ring repo (submodule / copied source)
-│   │   ├── inverse_stable_diffusion.py
-│   │   ├── optim_utils.py
-│   │   └── src/tree_ring_watermark/
+│   ├── tree-ring-watermark/         # Original code from github.com/YuxinWenRick/tree-ring-watermark
+│   │   ├── inverse_stable_diffusion.py   # DDIM inversion (their implementation)
+│   │   ├── optim_utils.py                # Watermark embed/detect utilities (their implementation)
+│   │   └── src/tree_ring_watermark/      # Core watermark library
 │   │
 │   ├── Instructions/
 │   │   └── Latex/
